@@ -95,7 +95,7 @@
             margin: auto;
             padding: 20px;
         }
-        .education-section, .research-section, .paper-section, .intern-section {
+        .education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section {
             background-color: var(--box-background);
             padding: 20px;
             box-shadow: 0 4px 6px var(--box-shadow);
@@ -104,25 +104,25 @@
             transform: translateY(20px);
             animation: slideUp 0.5s forwards ease-in-out;
         }
-        .education-section:hover, .research-section:hover, .paper-section:hover, .intern-section:hover {
+        .education-section:hover, .research-section:hover, .paper-section:hover, .intern-section:hover, .studyfield-section:hover, .skill-section:hover {
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
-        .education-section h2, .research-section h2, .paper-section h2, .intern-section h2 {
+        .education-section h2, .research-section h2, .paper-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2 {
             font-size: 28px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
         }
-        .education-section p, .research-section p, .paper-section p, .intern-section p {
+        .education-section p, .research-section p, .paper-section p, .intern-section p, .studyfield-section p, .skill-section p {
             margin: 0;
             font-size: 20px;
         }
-        .education-entry, .research-entry, .paper-entry, .intern-entry {
+        .education-entry, .research-entry, .paper-entry, .intern-entry, .studyfield-entry, .skill-entry {
             margin-bottom: 15px;
         }
-        .education-entry h3, .research-entry h3, .paper-entry h3, .intern-entry h3 {
+        .education-entry h3, .research-entry h3, .paper-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3 {
             font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
             margin: 5px 0;
         }
-        .education-entry p, .research-entry p, .paper-entry p, .intern-entry p {
+        .education-entry p, .research-entry p, .paper-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p {
             margin: 5px 0;
         }
         @keyframes fadeIn {
@@ -202,7 +202,7 @@
         </div>
         <img src="myface.jpg" alt="顔写真">
         <h1>原田 海斗</h1>
-        <p class="affiliation">静岡大学大学院 総合科学技術研究科 情報学専攻 峰野研究室</p>
+        <p class="affiliation">静岡大学大学院 峰野研究室 修士1年</p>
         <div class="contact-links">
             <div class="contact-info">
                 <a href="tel:070-7543-0383"><img src="phone_icon.png" alt="電話アイコン"></a>
@@ -257,6 +257,28 @@
                 <p>（2024.8）弁護士ドットコム株式会社</p>
             </div>
         </section>
+        <section class="studyfield-section">
+            <h2>研究領域</h2>
+            <div class="studyfield-entry">
+                <p>・IoT</p>
+                <p>・機械学習</p>
+                <p>・時系列データ処理</p>
+                <p>・無線ネットワーク</p>
+                <p>・ヒューマンセンシング</p>
+            </div>
+        </section>
+        <section class="skill-section">
+            <h2>技術スタック</h2>
+            <div class="skill-entry">
+                <p>・Python</p>
+                <p>・Pytorch/TensorFlow/Keras</p>
+                <p>・AWS</p>
+                <p>・HTML/CSS</p>
+                <p>・JavaScript</p>
+                <p>・C言語</p>
+                <p>・Java</p>
+            </div>
+        </section>
     </div>
     <script>
         function toggleTheme() {
@@ -268,7 +290,7 @@
         document.getElementById('theme-switch').addEventListener('change', toggleTheme);
 
         document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .intern-section');
+            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section');
             sections.forEach((section, index) => {
                 section.style.animationDelay = `${index * 0.2}s`;
             });
