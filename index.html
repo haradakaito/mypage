@@ -85,47 +85,44 @@
             height: 40px; /* アイコンのサイズを調整 */
         }
         .main-content {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
             opacity: 0;
             animation: fadeIn 1s forwards ease-in-out;
-        }
-        .education-section, .research-section {
-            background-color: var(--box-background);
-            margin: 30px;
+            max-width: 1300px;
+            margin: auto;
             padding: 20px;
-            width: 45%;
-            max-width: 600px; /* セクションの最大幅を設定 */
+        }
+        .education-section, .research-section, .paper-section, .intern-section {
+            background-color: var(--box-background);
+            padding: 20px;
             box-shadow: 0 4px 6px var(--box-shadow);
             border-radius: 8px;
-            flex: 1;
-            min-width: 300px; /* セクションの最小幅 */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
             opacity: 0;
             transform: translateY(20px);
             animation: slideUp 0.5s forwards ease-in-out;
         }
-        .education-section:hover, .research-section:hover {
+        .education-section:hover, .research-section:hover, .paper-section:hover, .intern-section:hover {
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
-        .education-section h2, .research-section h2 {
+        .education-section h2, .research-section h2, .paper-section h2, .intern-section h2 {
             font-size: 28px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
         }
-        .education-section p, .research-section p {
+        .education-section p, .research-section p, .paper-section p, .intern-section p {
             margin: 0;
             font-size: 20px;
         }
-        .education-entry, .research-entry {
+        .education-entry, .research-entry, .paper-entry, .intern-entry {
             margin-bottom: 15px;
         }
-        .education-entry h3, .research-entry h3 {
+        .education-entry h3, .research-entry h3, .paper-entry h3, .intern-entry h3 {
             font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
             margin: 5px 0;
         }
-        .education-entry p, .research-entry p {
+        .education-entry p, .research-entry p, .paper-entry p, .intern-entry p {
             margin: 5px 0;
         }
         @keyframes fadeIn {
@@ -140,8 +137,13 @@
             }
         }
         @media (max-width: 800px) {
-            .education-section, .research-section {
-                width: 90%; /* 幅が狭いデバイスでは幅を90%に調整 */
+            .main-content {
+                grid-template-columns: 1fr; /* 幅が狭いデバイスでは一列に調整 */
+            }
+        }
+        @media (min-width: 801px) {
+            .main-content {
+                grid-template-columns: repeat(2, 1fr); /* 幅が広いデバイスでは二列に調整 */
             }
         }
         .theme-toggle {
@@ -183,7 +185,7 @@
             border-radius: 50%;
         }
         input:checked + .slider {
-            background-color: #132b7a;
+            background-color: #4f619d;
         }
         input:checked + .slider:before {
             transform: translateX(26px);
@@ -239,6 +241,22 @@
                 <p>（2024.6）DICOMO2024 優秀プレゼンテーション賞</p>
             </div>
         </section>
+        <section class="paper-section">
+            <h2>論文発表</h2>
+            <div class="paper-entry">
+                <p>[1] 原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", DEIM2024, 2024.</p>
+                <p>[2] 原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024.</p>
+                <p>[3] 原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", DICOMO2024, 2024.</p>
+            </div>
+        </section>
+        <section class="intern-section">
+            <h2>インターン経験</h2>
+            <div class="intern-entry">
+                <p>（2024.7）BIGLOBE株式会社</p>
+                <p>（2024.7）株式会社NTTドコモ</p>
+                <p>（2024.8）弁護士ドットコム株式会社</p>
+            </div>
+        </section>
     </div>
     <script>
         function toggleTheme() {
@@ -250,7 +268,7 @@
         document.getElementById('theme-switch').addEventListener('change', toggleTheme);
 
         document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.education-section, .research-section');
+            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .intern-section');
             sections.forEach((section, index) => {
                 section.style.animationDelay = `${index * 0.2}s`;
             });
