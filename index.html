@@ -5,12 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マイページ</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+        h1 {
+            margin: 10px 0;
+            font-size: 36px;
+        }
+        p {
+            margin: 5px 0;
+        }
         .contact-info {
             display: flex;
+            justify-content: center;
             align-items: center;
+            margin: 10px 0;
         }
         .contact-info img {
             margin-right: 8px;
+        }
+        .contact-info a {
+            color: #0073b1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .contact-links img {
+            width: 30px;
+            height: 30px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 80%;
+            flex-wrap: wrap;
+        }
+        .education-section, .research-section, .research-introduction {
+            background-color: #fff;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .education-section, .research-section {
+            width: 45%;
+        }
+        .education-section h2, .research-section h2, .research-introduction h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .education-entry, .research-entry, .research-intro-entry {
+            margin-bottom: 15px;
+        }
+        .education-entry h3, .research-entry h3, .research-intro-entry h3 {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+        .education-entry p, .research-entry p, .research-intro-entry p {
+            margin: 5px 0;
+        }
+        .research-intro-entry {
+            background-color: #e7e9fc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .research-intro-entry h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .research-intro-entry p {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -18,27 +114,62 @@
     <header>
         <img src="myface.jpg" alt="顔写真">
         <h1>原田 海斗</h1>
-        <p>所属: 静岡大学大学院 総合科学技術研究科 情報学専攻</p>
-        <div class="contact-info">
-            <img src="phone_icon.png" alt="電話アイコン" width="20" height="20">
-            <p>070-7543-0383</p>
-        </div>
-        <div class="contact-info">
-            <img src="mail_icon.png" alt="メールアイコン" width="20" height="20">
-            <p><a href="harada.kaito.20@shizuoka.ac.jp">harada.kaito.20@shizuoka.ac.jp</a></p>
-        </div>
-        <div class="contact-info">
-            <img src="github_icon.png" alt="Githubアイコン" width="20" height="20">
-            <p><a href="https://github.com/haradakaito" target="_blank">GitHubアカウント</a></p>
-        </div>
-        <div class="contact-info">
-            <img src="qiita_icon.png" alt="Qiitaアイコン" width="20" height="20">
-            <p><a href="https://qiita.com/muumin_0525" target="_blank">Qiitaアカウント</a></p>
-        </div>
-        <div class="contact-info">
-            <img src="linkedin_icon.png" alt="Linkedinアイコン" width="20" height="20">
-            <p><a href="https://www.linkedin.com/in/%E6%B5%B7%E6%96%97-%E5%8E%9F%E7%94%B0-aa727b316/" target="_blank">Linkedinアカウント</a></p>
+        <p>静岡大学大学院 総合科学技術研究科 情報学専攻 峰野研究室</p>
+        <div class="contact-links">
+            <div class="contact-info">
+                <a href="tel:070-7543-0383"><img src="phone_icon.png" alt="電話アイコン"></a>
+                <p>070-7543-0383</p>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:harada.kaito.20@shizuoka.ac.jp"><img src="mail_icon.png" alt="メールアイコン"></a>
+                <p>harada.kaito.20@shizuoka.ac.jp</p>
+            </div>
+            <div class="contact-info">
+                <a href="https://github.com/haradakaito" target="_blank"><img src="github_icon.png" alt="Githubアイコン"></a>
+            </div>
+            <div class="contact-info">
+                <a href="https://qiita.com/muumin_0525" target="_blank"><img src="qiita_icon.png" alt="Qiitaアイコン"></a>
+            </div>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/%E6%B5%B7%E6%96%97-%E5%8E%9F%E7%94%B0-aa727b316/" target="_blank"><img src="linkedin_icon.png" alt="Linkedinアイコン"></a>
+            </div>
         </div>
     </header>
+    <div class="main-content">
+        <div class="flex-container">
+            <section class="education-section">
+                <h2>学歴</h2>
+                <div class="education-entry">
+                    <p>（2014~2017）射水市立 大門中学校</p>
+                    <p>（2017~2020）射水市立 大門高等学校</p>
+                    <p>（2020~2024）静岡大学 情報学部 情報科学科</p>
+                    <p>（2024~2026）静岡大学大学院 総合科学技術研究科 情報学専攻</p>
+                </div>
+            </section>
+            <section class="research-section">
+                <h2>研究実績</h2>
+                <div class="research-entry">
+                    <p>（2024.1）国際特許出願</p>
+                    <p>（2024.3）情報処理学会第86回全国大会 学生奨励賞</p>
+                    <p>（2024.6）DICOMO2024 優秀プレゼンテーション賞</p>
+                </div>
+            </section>
+        </div>
+        <section class="research-introduction">
+            <h2>研究紹介</h2>
+            <div class="research-intro-entry">
+                <h3>研究タイトル1</h3>
+                <p>本研究では、最新の自然言語処理技術を応用し、テキストデータの解析を行います。特に、機械学習とディープラーニングを用いた手法を中心に研究を進めています。</p>
+            </div>
+            <div class="research-intro-entry">
+                <h3>研究タイトル2</h3>
+                <p>本研究は、画像処理技術を活用し、医療画像の診断精度を向上させることを目的としています。ディープラーニングによる特徴抽出技術を応用しています。</p>
+            </div>
+            <div class="research-intro-entry">
+                <h3>研究タイトル3</h3>
+                <p>音声認識技術を用いて、音声データの自動文字起こしシステムの開発を行っています。高精度な音声認識モデルの構築を目指しています。</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
