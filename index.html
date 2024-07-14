@@ -34,16 +34,22 @@
             padding: 20px;
             text-align: center;
             position: relative;
+            max-width: 1300px;
+            margin: auto;
         }
         header img {
             border-radius: 50%;
-            width: 180px; /* 顔写真の幅を調整 */
-            height: 180px; /* 顔写真の高さを調整 */
+            width: 300px; /* 顔写真の幅を調整 */
+            height: 300px; /* 顔写真の高さを調整 */
             object-fit: cover;
         }
         h1 {
             margin: 10px 0;
-            font-size: 36px; /* 名前のフォントサイズを調整 */
+            font-size: 44px; /* 名前のフォントサイズを調整 */
+        }
+        .affiliation { /* 所属部署のスタイル */
+            margin: 5px 0;
+            font-size: 22px;
         }
         p {
             margin: 5px 0;
@@ -62,6 +68,10 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .contact-info p {
+            margin: 0;
+            font-size: 20px;
+        }
         .contact-info a:hover {
             text-decoration: underline;
         }
@@ -71,22 +81,23 @@
             gap: 15px;
         }
         .contact-links img {
-            width: 30px;  /* アイコンのサイズを調整 */
-            height: 30px; /* アイコンのサイズを調整 */
+            width: 40px;  /* アイコンのサイズを調整 */
+            height: 40px; /* アイコンのサイズを調整 */
         }
         .main-content {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
             flex-wrap: wrap;
             opacity: 0;
             animation: fadeIn 1s forwards ease-in-out;
         }
         .education-section, .research-section {
             background-color: var(--box-background);
-            margin: 20px auto;
+            margin: 30px;
             padding: 20px;
             width: 45%;
+            max-width: 600px; /* セクションの最大幅を設定 */
             box-shadow: 0 4px 6px var(--box-shadow);
             border-radius: 8px;
             flex: 1;
@@ -102,6 +113,10 @@
         .education-section h2, .research-section h2 {
             font-size: 28px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
+        }
+        .education-section p, .research-section p {
+            margin: 0;
+            font-size: 20px;
         }
         .education-entry, .research-entry {
             margin-bottom: 15px;
@@ -168,7 +183,7 @@
             border-radius: 50%;
         }
         input:checked + .slider {
-            background-color: #2196F3;
+            background-color: #132b7a;
         }
         input:checked + .slider:before {
             transform: translateX(26px);
@@ -185,6 +200,7 @@
         </div>
         <img src="myface.jpg" alt="顔写真">
         <h1>原田 海斗</h1>
+        <p class="affiliation">静岡大学大学院 総合科学技術研究科 情報学専攻 峰野研究室</p>
         <div class="contact-links">
             <div class="contact-info">
                 <a href="tel:070-7543-0383"><img src="phone_icon.png" alt="電話アイコン"></a>
