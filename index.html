@@ -96,7 +96,7 @@
             margin: auto;
             padding: 20px;
         }
-        .education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section {
+        .education-section, .research-section, .paper-section, .patents-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section, .articleintro-section {
             background-color: var(--box-background);
             padding: 20px;
             box-shadow: 0 4px 6px var(--box-shadow);
@@ -105,34 +105,37 @@
             transform: translateY(20px);
             animation: slideUp 0.5s forwards ease-in-out;
         }
-        .education-section:hover, .research-section:hover, .paper-section:hover, .intern-section:hover, .studyfield-section:hover, .skill-section:hover, .other-section:hover, .paperintro-section:hover {
+        .education-section:hover, .research-section:hover, .paper-section:hover, .patents-section:hover, .intern-section:hover, .studyfield-section:hover, .skill-section:hover, .other-section:hover, .paperintro-section:hover, .articleintro-section:hover {
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
-        .education-section h2, .research-section h2, .paper-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2 {
+        .education-section h2, .research-section h2, .paper-section h2, .patents-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2, .articleintro-section h2 {
             font-size: 28px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
         }
-        .education-section p, .research-section p, .paper-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p {
+        .education-section p, .research-section p, .paper-section p, .patents-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p, .articleintro-section p {
             margin: 0;
             font-size: 20px;
         }
-        .education-entry, .research-entry, .paper-entry, .intern-entry, .studyfield-entry, .skill-entry, .other-entry, .paperintro-entry {
+        .education-entry, .research-entry, .paper-entry, .patents-entry, .intern-entry, .studyfield-entry, .skill-entry, .other-entry, .paperintro-entry, .articleintro-entry {
             margin-bottom: 15px;
         }
-        .education-entry h3, .research-entry h3, .paper-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3, .other-entry h3, .paperintro-entry h3 {
+        .education-entry h3, .research-entry h3, .paper-entry h3, .patents-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3, .other-entry h3, .paperintro-entry h3, .articleintro-entry h3 {
             font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
             margin: 5px 0;
         }
-        .education-entry p, .research-entry p, .paper-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p, .paperintro-entry p {
+        .education-entry p, .research-entry p, .paper-entry p, .patents-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p, .paperintro-entry p, .articleintro-entry p {
             margin: 5px 0;
         }
-        .paperintro-entry-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .paperintro-entry-container, .articleintro-entry-container {
+            display: flex;
+            overflow-x: auto;
             gap: 20px;
-            justify-content: center;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
         }
-        .paperintro-entry {
+        .paperintro-entry, .articleintro-entry {
+            flex: 0 0 auto;
+            width: 350px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -142,14 +145,16 @@
             box-shadow: 0 4px 6px var(--box-shadow);
             border-radius: 8px;
             text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* ホバー効果の追加 */
+            scroll-snap-align: start;
         }
-        .paperintro-entry h3 {
+        .paperintro-entry h3, .articleintro-entry h3 {
             font-size: 20px; /* 論文タイトルのフォントサイズを調整 */
             margin-bottom: 5px; /* タイトルと画像の間に余白を追加 */
             line-height: 1.2; /* 行間を詰める */
             display: inline;
         }
-        .paperintro-entry img {
+        .paperintro-entry img, .articleintro-entry img {
             width: 100%;
             height: auto;
             max-width: 450px; /* サムネイルの最大幅を設定 */
@@ -157,23 +162,22 @@
             object-fit: cover;
             margin-bottom: 10px;
         }
-        .paperintro-entry .paperinfo {
+        .paperintro-entry .paperinfo, .articleintro-entry .articleinfo {
             text-align: center;
         }
-        .paperintro-entry .paperinfo a {
+        .paperintro-entry .paperinfo a, .articleintro-entry .articleinfo a {
             display: inline-flex;
             align-items: center;
             color: #0073b1;
             text-decoration: none;
             font-weight: bold;
         }
-        .paperintro-entry .paperinfo a:hover {
+        .paperintro-entry .paperinfo a:hover, .articleintro-entry .articleinfo a:hover {
             text-decoration: underline;
         }
-        .paperintro-entry .paperinfo img {
-            margin-right: 5px;
-            width: 24px; /* アイコンの幅を調整 */
-            height: 24px; /* アイコンの高さを調整 */
+        .paperintro-entry:hover, .articleintro-entry:hover {
+            transform: translateY(-10px); /* ホバー時の動きを追加 */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* ホバー時の影の強調 */
         }
         @keyframes fadeIn {
             to {
@@ -240,7 +244,7 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
-        .paper-section, .paperintro-section {
+        .paper-section, .patents-section, .paperintro-section, .articleintro-section {
             grid-column: span 2;
         }
         .skill-entry {
@@ -318,9 +322,15 @@
         <section class="paper-section">
             <h2>学会発表</h2>
             <div class="paper-entry">
-                <p>[1] 原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024 <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
-                <p>[2] 原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024 <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
-                <p>[3] 原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024 <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>・原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024 <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>・原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024 <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>・原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024 <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+            </div>
+        </section>
+        <section class="patents-section">
+            <h2>特許</h2>
+            <div class="patents-entry">
+                <p>・峰野博史, 原田海斗「推定システム、推定プログラム、および推定方法」（出願番号：2024-010392，出願日：2024.1.26）</p>
             </div>
         </section>
         <section class="intern-section">
@@ -351,11 +361,21 @@
                 </div>
             </div>
             <div class="skill-entry">
-                <p>Pytorch/TensorFlow/Keras</p>
+                <p>Jupyter Notebook</p>
                 <div class="progress-bar">
                     <div class="active"></div>
                     <div class="active"></div>
                     <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>Pytorch/TensorFlow/Keras</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
                     <div></div>
                     <div></div>
                 </div>
@@ -444,6 +464,56 @@
                 </div>
             </div>
         </section>
+        <section class="articleintro-section">
+            <h2>投稿記事紹介</h2>
+            <div class="articleintro-entry-container">
+                <div class="articleintro-entry">
+                    <h3>【静岡県民必見！？】遠鉄バスどこ！？（PC版）作ってみた</h3>
+                    <img src="【静岡県民必見！？】遠鉄バスどこ！？（PC版）作ってみた.png" alt="投稿記事サムネイル">
+                    <p>2024.6.25</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>【取り扱い注意】偽アプリの作り方</h3>
+                    <img src="【取り扱い注意】偽アプリの作り方.png" alt="投稿記事サムネイル">
+                    <p>2024.6.7</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>【LaTeX】VSCodeでOverleafを操作しよう！</h3>
+                    <img src="【LaTeX】VSCodeでOverleafを操作しよう！.png" alt="投稿記事サムネイル">
+                    <p>2024.4.11</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>GPTの歴史についてざっくり解説</h3>
+                    <img src="GPTの歴史についてざっくり解説.png" alt="投稿記事サムネイル">
+                    <p>2024.4.11</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>【OpenCVで居眠り検知カメラを作ってみた</h3>
+                    <img src="OpenCVで居眠り検知カメラを作ってみた.png" alt="投稿記事サムネイル">
+                    <p>2024.4.10</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>Nexmonの環境構築 for RaspberryPi3/4B</h3>
+                    <img src="Nexmonの環境構築 for RaspberryPi3-4B.png" alt="投稿記事サムネイル">
+                    <p>2024.4.10</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>OFDM通信方式について</h3>
+                    <img src="OFDM通信方式について.png" alt="投稿記事サムネイル">
+                    <p>2024.4.9</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>定時メール自動送信システムの作成</h3>
+                    <img src="定時メール自動送信システムの作成.png" alt="投稿記事サムネイル">
+                    <p>2024.1.29</p>
+                </div>
+                <div class="articleintro-entry">
+                    <h3>【Python】競馬シミュレーションアプリを作ろう！</h3>
+                    <img src="【Python】競馬シミュレーションアプリを作ろう！.png" alt="投稿記事サムネイル">
+                    <p>2023.6.13</p>
+                </div>
+            </div>
+        </section>
     </div>
     <script>
         function toggleTheme() {
@@ -455,7 +525,7 @@
         document.getElementById('theme-switch').addEventListener('change', toggleTheme);
 
         document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section');
+            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .patents-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section, .articleintro-section');
             sections.forEach((section, index) => {
                 section.style.animationDelay = `${index * 0.2}s`;
             });
