@@ -268,11 +268,17 @@
         .paper-section, .patents-section, .paperintro-section, .articleintro-section {
             grid-column: span 2;
         }
-        .skill-entry {
-            margin-bottom: 15px;
+        .skill-entry .progress-bar div {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #ddd;
+            min-width: 5px; /* 最小横幅を設定 */
         }
-        .skill-entry p {
-            margin-bottom: 5px;
+        .skill-entry .progress-bar div.active {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #0c698b;
+            min-width: 5px; /* 最小横幅を設定 */
         }
         .progress-bar {
             display: flex;
