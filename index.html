@@ -126,6 +126,55 @@
         .education-entry p, .research-entry p, .paper-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p, .paperintro-entry p {
             margin: 5px 0;
         }
+        .paperintro-entry-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .paperintro-entry {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--box-background);
+            padding: 20px;
+            box-shadow: 0 4px 6px var(--box-shadow);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .paperintro-entry h3 {
+            font-size: 20px; /* 論文タイトルのフォントサイズを調整 */
+            margin-bottom: 5px; /* タイトルと画像の間に余白を追加 */
+            line-height: 1.2; /* 行間を詰める */
+            display: inline;
+        }
+        .paperintro-entry img {
+            width: 100%;
+            height: auto;
+            max-width: 450px; /* サムネイルの最大幅を設定 */
+            aspect-ratio: 4/3; /* サムネイルのアスペクト比を設定 */
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .paperintro-entry .paperinfo {
+            text-align: center;
+        }
+        .paperintro-entry .paperinfo a {
+            display: inline-flex;
+            align-items: center;
+            color: #0073b1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .paperintro-entry .paperinfo a:hover {
+            text-decoration: underline;
+        }
+        .paperintro-entry .paperinfo img {
+            margin-right: 5px;
+            width: 24px; /* アイコンの幅を調整 */
+            height: 24px; /* アイコンの高さを調整 */
+        }
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -269,9 +318,9 @@
         <section class="paper-section">
             <h2>学会発表</h2>
             <div class="paper-entry">
-                <p>[1] 原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024.</p>
-                <p>[2] 原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024.</p>
-                <p>[3] 原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024.</p>
+                <p>[1] 原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024 <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>[2] 原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024 <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>[3] 原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024 <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
             </div>
         </section>
         <section class="intern-section">
@@ -374,8 +423,25 @@
         </section>
         <section class="paperintro-section">
             <h2>論文紹介</h2>
-            <div class="paperintro-entry">
-                <p></p>
+            <div class="paperintro-entry-container">
+                <div class="paperintro-entry">
+                    <h3>NexmonによるCSIベースのスマートデバイス状態推定</h3>
+                    <img src="NexmonによるCSIベースのスマートデバイス状態推定.png" alt="発表資料サムネイル">
+                    <p>2024.3.1</p>
+                    <p><a href="https://confit.atlas.jp/guide/event/deim2024/top?lang=ja">データ工学と情報マネジメントに関するフォーラム(DEIM2024)</a></p>
+                </div>
+                <div class="paperintro-entry">
+                    <h3>NexmonによるCSIを用いた人物通過検出システムに関する研究</h3>
+                    <img src="NexmonによるCSIを用いた人物通過検出システムに関する研究.png" alt="発表資料サムネイル">
+                    <p>2024.3.15</p>
+                    <p><a href="https://www.ipsj.or.jp/event/taikai/86/index.html">情報処理学会第86回全国大会</a></p>
+                </div>
+                <div class="paperintro-entry">
+                    <h3>連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討</h3>
+                    <img src="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.png" alt="発表資料サムネイル">
+                    <p>2024.6.27</p>
+                    <p><a href="https://dicomo.org/">マルチメディア、分散、協調とモバイル(DICOMO2024)</a></p>
+                </div>
             </div>
         </section>
     </div>
