@@ -95,7 +95,7 @@
             margin: auto;
             padding: 20px;
         }
-        .education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section {
+        .education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section, .other-section {
             background-color: var(--box-background);
             padding: 20px;
             box-shadow: 0 4px 6px var(--box-shadow);
@@ -104,25 +104,25 @@
             transform: translateY(20px);
             animation: slideUp 0.5s forwards ease-in-out;
         }
-        .education-section:hover, .research-section:hover, .paper-section:hover, .intern-section:hover, .studyfield-section:hover, .skill-section:hover {
+        .education-section:hover, .research-section:hover, .paper-section:hover, .intern-section:hover, .studyfield-section:hover, .skill-section:hover, .other-section:hover {
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
-        .education-section h2, .research-section h2, .paper-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2 {
+        .education-section h2, .research-section h2, .paper-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2 {
             font-size: 28px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
         }
-        .education-section p, .research-section p, .paper-section p, .intern-section p, .studyfield-section p, .skill-section p {
+        .education-section p, .research-section p, .paper-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p {
             margin: 0;
             font-size: 20px;
         }
-        .education-entry, .research-entry, .paper-entry, .intern-entry, .studyfield-entry, .skill-entry {
+        .education-entry, .research-entry, .paper-entry, .intern-entry, .studyfield-entry, .skill-entry, .other-entry {
             margin-bottom: 15px;
         }
-        .education-entry h3, .research-entry h3, .paper-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3 {
+        .education-entry h3, .research-entry h3, .paper-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3, .other-entry h3 {
             font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
             margin: 5px 0;
         }
-        .education-entry p, .research-entry p, .paper-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p {
+        .education-entry p, .research-entry p, .paper-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p {
             margin: 5px 0;
         }
         @keyframes fadeIn {
@@ -190,8 +190,26 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
-        .paper-section, .skill-section {
+        .paper-section {
             grid-column: span 2;
+        }
+        .skill-entry {
+            margin-bottom: 15px;
+        }
+        .skill-entry p {
+            margin-bottom: 5px;
+        }
+        .progress-bar {
+            display: flex;
+            gap: 5px;
+        }
+        .progress-bar div {
+            width: 90px;
+            height: 10px;
+            background-color: #ddd;
+        }
+        .progress-bar div.active {
+            background-color: #0c698b;
         }
     </style>
 </head>
@@ -250,9 +268,9 @@
         <section class="paper-section">
             <h2>学会発表</h2>
             <div class="paper-entry">
-                <p>[1] 原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", DEIM2024, 2024.</p>
+                <p>[1] 原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024.</p>
                 <p>[2] 原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024.</p>
-                <p>[3] 原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", DICOMO2024, 2024.</p>
+                <p>[3] 原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024.</p>
             </div>
         </section>
         <section class="intern-section">
@@ -263,6 +281,86 @@
                 <p>（2024.8）弁護士ドットコム株式会社</p>
             </div>
         </section>
+        <section class="other-section">
+            <h2>その他（開発活動）</h2>
+            <div class="other-entry">
+                <p>（2024.1）メール自動送信システムの開発</p>
+                <p>（2024.6）遠鉄バスどこ!?（PC版）の開発</p>
+            </div>
+        </section>
+        <section class="skill-section">
+            <h2>技術スタック</h2>
+            <div class="skill-entry">
+                <p>Python</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>Pytorch/TensorFlow/Keras</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>AWS</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>HTML/CSS</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>JavaScript</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>C言語</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>Java</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
         <section class="studyfield-section">
             <h2>研究領域</h2>
             <div class="studyfield-entry">
@@ -271,18 +369,6 @@
                 <p>・時系列データ処理</p>
                 <p>・無線ネットワーク</p>
                 <p>・ヒューマンセンシング</p>
-            </div>
-        </section>
-        <section class="skill-section">
-            <h2>技術スタック</h2>
-            <div class="skill-entry">
-                <p>・Python</p>
-                <p>・Pytorch/TensorFlow/Keras</p>
-                <p>・AWS</p>
-                <p>・HTML/CSS</p>
-                <p>・JavaScript</p>
-                <p>・C言語</p>
-                <p>・Java</p>
             </div>
         </section>
     </div>
@@ -296,7 +382,7 @@
         document.getElementById('theme-switch').addEventListener('change', toggleTheme);
 
         document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section');
+            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .intern-section, .studyfield-section, .skill-section, .other-section');
             sections.forEach((section, index) => {
                 section.style.animationDelay = `${index * 0.2}s`;
             });
