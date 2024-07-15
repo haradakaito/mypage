@@ -12,6 +12,8 @@
             --header-background: #fff;
             --box-shadow: rgba(0, 0, 0, 0.1);
             --box-background: #fff;
+            --scrollbar-color: #ccc;
+            --scrollbar-thumb-color: #aaa;
         }
 
         [data-theme="dark"] {
@@ -20,6 +22,23 @@
             --header-background: #444;
             --box-shadow: rgba(0, 0, 0, 0.5);
             --box-background: #444;
+            --scrollbar-color: #555;
+            --scrollbar-thumb-color: #888;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 18px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb-color);
+            border-radius: 10px;
+            border: 3px solid var(--scrollbar-color);
         }
 
         body {
@@ -359,7 +378,7 @@
                     <div class="active"></div>
                     <div class="active"></div>
                     <div class="active"></div>
-                    <div></div>
+                    <div class="active"></div>
                 </div>
             </div>
             <div class="skill-entry">
@@ -377,7 +396,17 @@
                 <div class="progress-bar">
                     <div class="active"></div>
                     <div class="active"></div>
+                    <div class="active"></div>
                     <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="skill-entry">
+                <p>HTML/CSS/JavaScript</p>
+                <div class="progress-bar">
+                    <div class="active"></div>
+                    <div class="active"></div>
+                    <div class="active"></div>
                     <div></div>
                     <div></div>
                 </div>
@@ -393,30 +422,10 @@
                 </div>
             </div>
             <div class="skill-entry">
-                <p>HTML/CSS</p>
-                <div class="progress-bar">
-                    <div class="active"></div>
-                    <div class="active"></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div class="skill-entry">
-                <p>JavaScript</p>
-                <div class="progress-bar">
-                    <div class="active"></div>
-                    <div class="active"></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div class="skill-entry">
                 <p>C言語</p>
                 <div class="progress-bar">
                     <div class="active"></div>
-                    <div></div>
+                    <div class="active"></div>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -426,7 +435,7 @@
                 <p>Java</p>
                 <div class="progress-bar">
                     <div class="active"></div>
-                    <div></div>
+                    <div class="active"></div>
                     <div></div>
                     <div></div>
                     <div></div>
