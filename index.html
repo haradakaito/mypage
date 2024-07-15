@@ -147,6 +147,8 @@
             text-align: center;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* ホバー効果の追加 */
             scroll-snap-align: start;
+            text-decoration: none; /* リンクの下線を削除 */
+            color: var(--text-color); /* リンクの文字色をテキストと同じに設定 */
         }
         .paperintro-entry h3, .articleintro-entry h3 {
             font-size: 20px; /* 論文タイトルのフォントサイズを調整 */
@@ -315,16 +317,16 @@
             <h2>業績</h2>
             <div class="research-entry">
                 <p>（2024.1）国際特許出願</p>
-                <p>（2024.3）情報処理学会第86回全国大会 学生奨励賞</p>
-                <p>（2024.6）DICOMO2024 優秀プレゼンテーション賞</p>
+                <p>（2024.3）情報処理学会第86回全国大会 学生奨励賞 <a href="https://www.ipsj.or.jp/award/taikaigakusei.html#hdg1" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>（2024.6）DICOMO2024 優秀プレゼンテーション賞 <a href="https://dicomo.org/commendation/" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
             </div>
         </section>
         <section class="paper-section">
             <h2>学会発表</h2>
             <div class="paper-entry">
-                <p>・原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024 <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
-                <p>・原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024 <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
-                <p>・原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024 <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>・原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024 <a href="https://confit.atlas.jp/guide/event/deim2024/subject/T2-B-7-02/tables?cryptoId=" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>・原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024 <a href="https://www.ipsj.or.jp/event/taikai/86/WEB/data/pdf/1ZC-01.html" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
+                <p>・原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024 <a href="https://tsys.jp/dicomo/2024/program/program.html#4F" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
             </div>
         </section>
         <section class="patents-section">
@@ -444,74 +446,74 @@
         <section class="paperintro-section">
             <h2>論文紹介</h2>
             <div class="paperintro-entry-container">
-                <div class="paperintro-entry">
+                <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank" class="paperintro-entry">
                     <h3>NexmonによるCSIベースのスマートデバイス状態推定</h3>
                     <img src="NexmonによるCSIベースのスマートデバイス状態推定.png" alt="発表資料サムネイル">
                     <p>2024.3.1</p>
-                    <p><a href="https://confit.atlas.jp/guide/event/deim2024/top?lang=ja">データ工学と情報マネジメントに関するフォーラム(DEIM2024)</a></p>
-                </div>
-                <div class="paperintro-entry">
+                    <p>データ工学と情報マネジメントに関するフォーラム(DEIM2024)</p>
+                </a>
+                <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank" class="paperintro-entry">
                     <h3>NexmonによるCSIを用いた人物通過検出システムに関する研究</h3>
                     <img src="NexmonによるCSIを用いた人物通過検出システムに関する研究.png" alt="発表資料サムネイル">
                     <p>2024.3.15</p>
-                    <p><a href="https://www.ipsj.or.jp/event/taikai/86/index.html">情報処理学会第86回全国大会</a></p>
-                </div>
-                <div class="paperintro-entry">
+                    <p>情報処理学会第86回全国大会</p>
+                </a>
+                <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank" class="paperintro-entry">
                     <h3>連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討</h3>
                     <img src="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.png" alt="発表資料サムネイル">
                     <p>2024.6.27</p>
-                    <p><a href="https://dicomo.org/">マルチメディア、分散、協調とモバイル(DICOMO2024)</a></p>
-                </div>
+                    <p>マルチメディア、分散、協調とモバイル(DICOMO2024)</p>
+                </a>
             </div>
         </section>
         <section class="articleintro-section">
             <h2>投稿記事紹介</h2>
             <div class="articleintro-entry-container">
-                <div class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/d6db1e858c035a0a2514" target="_blank" class="articleintro-entry">
                     <h3>【静岡県民必見！？】遠鉄バスどこ！？（PC版）作ってみた</h3>
                     <img src="【静岡県民必見！？】遠鉄バスどこ！？（PC版）作ってみた.png" alt="投稿記事サムネイル">
                     <p>2024.6.25</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/3ee104aed0d3cb6a1dab" target="_blank" class="articleintro-entry">
                     <h3>【取り扱い注意】偽アプリの作り方</h3>
                     <img src="【取り扱い注意】偽アプリの作り方.png" alt="投稿記事サムネイル">
                     <p>2024.6.7</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/26ae779db23a1c862158" target="_blank" class="articleintro-entry">
                     <h3>【LaTeX】VSCodeでOverleafを操作しよう！</h3>
                     <img src="【LaTeX】VSCodeでOverleafを操作しよう！.png" alt="投稿記事サムネイル">
                     <p>2024.4.11</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/a1ccc320577f51ea4667" target="_blank" class="articleintro-entry">
                     <h3>GPTの歴史についてざっくり解説</h3>
                     <img src="GPTの歴史についてざっくり解説.png" alt="投稿記事サムネイル">
                     <p>2024.4.11</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/77160e7faf84bf6d8188" target="_blank" class="articleintro-entry">
                     <h3>【OpenCVで居眠り検知カメラを作ってみた</h3>
                     <img src="OpenCVで居眠り検知カメラを作ってみた.png" alt="投稿記事サムネイル">
                     <p>2024.4.10</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/8e9ef1081b372509d4a1" target="_blank" class="articleintro-entry">
                     <h3>Nexmonの環境構築 for RaspberryPi3/4B</h3>
                     <img src="Nexmonの環境構築 for RaspberryPi3-4B.png" alt="投稿記事サムネイル">
                     <p>2024.4.10</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/ea5602685e129093581f" target="_blank" class="articleintro-entry">
                     <h3>OFDM通信方式について</h3>
                     <img src="OFDM通信方式について.png" alt="投稿記事サムネイル">
                     <p>2024.4.9</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/6d7e81651d3b37e11183" target="_blank" class="articleintro-entry">
                     <h3>定時メール自動送信システムの作成</h3>
                     <img src="定時メール自動送信システムの作成.png" alt="投稿記事サムネイル">
                     <p>2024.1.29</p>
-                </div>
-                <div class="articleintro-entry">
+                </a>
+                <a href="https://qiita.com/muumin_0525/items/dc0a48d5c5ea902bb6a7" target="_blank" class="articleintro-entry">
                     <h3>【Python】競馬シミュレーションアプリを作ろう！</h3>
                     <img src="【Python】競馬シミュレーションアプリを作ろう！.png" alt="投稿記事サムネイル">
                     <p>2023.6.13</p>
-                </div>
+                </a>
             </div>
         </section>
     </div>
