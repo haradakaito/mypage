@@ -286,6 +286,47 @@
         .progress-bar div.active {
             background-color: #0c698b;
         }
+        .contact-section {
+            background-color: var(--box-background);
+            padding: 20px;
+            box-shadow: 0 4px 6px var(--box-shadow);
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.5s forwards ease-in-out;
+            text-align: center;
+            grid-column: span 2;
+        }
+
+        .contact-section:hover {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .contact-entry p {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0073b1;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #005580;
+        }
     </style>
 </head>
 <body>
@@ -525,6 +566,13 @@
                 </a>
             </div>
         </section>
+        <section class="contact-section">
+            <h2>お問い合わせ</h2>
+            <div class="contact-entry">
+                <p>お問い合わせは以下のリンクからお願いします</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLsxrNhWs9A0owocwPH_-omMbq9hWDXn-Ow_o_ASmD_DaOKw/viewform?usp=sf_link" target="_blank" class="contact-button">お問い合わせフォーム</a>
+            </div>
+        </section>
     </div>
     <script>
         function toggleTheme() {
@@ -541,6 +589,14 @@
                 section.style.animationDelay = `${index * 0.2}s`;
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .patents-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section, .articleintro-section, .contact-section');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+
     </script>
 </body>
 </html>
