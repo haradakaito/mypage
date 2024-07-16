@@ -59,17 +59,17 @@
         }
         header img {
             border-radius: 50%;
-            width: 300px; /* 顔写真の幅を調整 */
-            height: 300px; /* 顔写真の高さを調整 */
+            width: 150px; /* 顔写真の幅を調整 */
+            height: 150px; /* 顔写真の高さを調整 */
             object-fit: cover;
         }
         h1 {
             margin: 10px 0;
-            font-size: 44px; /* 名前のフォントサイズを調整 */
+            font-size: 32px; /* 名前のフォントサイズを調整 */
         }
         .affiliation { /* 所属部署のスタイル */
             margin: 5px 0;
-            font-size: 22px;
+            font-size: 18px;
         }
         p {
             margin: 5px 0;
@@ -90,7 +90,7 @@
         }
         .contact-info p {
             margin: 0;
-            font-size: 20px;
+            font-size: 16px;
         }
         .contact-info a:hover {
             text-decoration: underline;
@@ -98,15 +98,16 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .contact-links img {
-            width: 40px;  /* アイコンのサイズを調整 */
-            height: 40px; /* アイコンのサイズを調整 */
+            width: 30px;  /* アイコンのサイズを調整 */
+            height: 30px; /* アイコンのサイズを調整 */
         }
         .main-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             justify-content: center;
             opacity: 0;
@@ -128,18 +129,18 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
         .education-section h2, .research-section h2, .paper-section h2, .patents-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2, .articleintro-section h2 {
-            font-size: 28px; /* セクションタイトルフォントサイズ */
+            font-size: 24px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
         }
         .education-section p, .research-section p, .paper-section p, .patents-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p, .articleintro-section p {
             margin: 0;
-            font-size: 20px;
+            font-size: 16px;
         }
         .education-entry, .research-entry, .paper-entry, .patents-entry, .intern-entry, .studyfield-entry, .skill-entry, .other-entry, .paperintro-entry, .articleintro-entry {
             margin-bottom: 15px;
         }
         .education-entry h3, .research-entry h3, .paper-entry h3, .patents-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3, .other-entry h3, .paperintro-entry h3, .articleintro-entry h3 {
-            font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
+            font-size: 20px; /* 学校名および研究タイトルのフォントサイズ */
             margin: 5px 0;
         }
         .education-entry p, .research-entry p, .paper-entry p, .patents-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p, .paperintro-entry p, .articleintro-entry p {
@@ -154,7 +155,7 @@
         }
         .paperintro-entry, .articleintro-entry {
             flex: 0 0 auto;
-            width: 350px;
+            width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -170,7 +171,7 @@
             color: var(--text-color); /* リンクの文字色をテキストと同じに設定 */
         }
         .paperintro-entry h3, .articleintro-entry h3 {
-            font-size: 20px; /* 論文タイトルのフォントサイズを調整 */
+            font-size: 18px; /* 論文タイトルのフォントサイズを調整 */
             margin-bottom: 5px; /* タイトルと画像の間に余白を追加 */
             line-height: 1.2; /* 行間を詰める */
             display: inline;
@@ -178,7 +179,7 @@
         .paperintro-entry img, .articleintro-entry img {
             width: 100%;
             height: auto;
-            max-width: 450px; /* サムネイルの最大幅を設定 */
+            max-width: 300px; /* サムネイルの最大幅を設定 */
             aspect-ratio: 4/3; /* サムネイルのアスペクト比を設定 */
             object-fit: cover;
             margin-bottom: 10px;
@@ -211,14 +212,32 @@
                 transform: translateY(0);
             }
         }
-        @media (max-width: 800px) {
-            .main-content {
-                grid-template-columns: 1fr; /* 幅が狭いデバイスでは一列に調整 */
+        @media (max-width: 600px) {
+            header img {
+                width: 100px;
+                height: 100px;
             }
-        }
-        @media (min-width: 801px) {
-            .main-content {
-                grid-template-columns: repeat(2, 1fr); /* 幅が広いデバイスでは二列に調整 */
+            h1 {
+                font-size: 24px;
+            }
+            .affiliation {
+                font-size: 16px;
+            }
+            .contact-links img {
+                width: 25px;
+                height: 25px;
+            }
+            .education-section h2, .research-section h2, .paper-section h2, .patents-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2, .articleintro-section h2 {
+                font-size: 20px;
+            }
+            .education-section p, .research-section p, .paper-section p, .patents-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p, .articleintro-section p {
+                font-size: 14px;
+            }
+            .paperintro-entry, .articleintro-entry {
+                width: 260px;
+            }
+            .paperintro-entry h3, .articleintro-entry h3 {
+                font-size: 16px;
             }
         }
         .theme-toggle {
@@ -309,13 +328,13 @@
         }
 
         .contact-section h2 {
-            font-size: 28px;
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
         .contact-entry p {
             margin: 0;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .contact-button {
