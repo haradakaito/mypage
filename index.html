@@ -211,25 +211,14 @@
                 transform: translateY(0);
             }
         }
+        @media (max-width: 800px) {
+            .main-content {
+                grid-template-columns: 1fr; /* 幅が狭いデバイスでは一列に調整 */
+            }
+        }
         @media (min-width: 801px) {
             .main-content {
                 grid-template-columns: repeat(2, 1fr); /* 幅が広いデバイスでは二列に調整 */
-            }
-        }
-        @media (max-width: 600px) {
-            header img{
-                width: 100px;
-                height: 100px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            .affiliation {
-                font-size: 16px;
-            }
-            .contact-links img {
-                width: 25px;
-                height: 25px;
             }
         }
         .theme-toggle {
