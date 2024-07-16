@@ -30,11 +30,9 @@
             width: 12px;
             height: 18px;
         }
-
         ::-webkit-scrollbar-track {
             background: var(--scrollbar-color);
         }
-
         ::-webkit-scrollbar-thumb {
             background-color: var(--scrollbar-thumb-color);
             border-radius: 10px;
@@ -48,6 +46,7 @@
             background-color: var(--background-color);
             color: var(--text-color);
         }
+
         header {
             background-color: var(--header-background);
             box-shadow: 0 4px 6px var(--box-shadow);
@@ -59,21 +58,21 @@
         }
         header img {
             border-radius: 50%;
-            width: 300px; /* 顔写真の幅を調整 */
-            height: 300px; /* 顔写真の高さを調整 */
+            width: 300px;
+            height: 300px;
             object-fit: cover;
         }
+
         h1 {
             margin: 10px 0;
-            font-size: 44px; /* 名前のフォントサイズを調整 */
+            font-size: 44px;
         }
-        .affiliation { /* 所属部署のスタイル */
+
+        .affiliation {
             margin: 5px 0;
             font-size: 22px;
         }
-        p {
-            margin: 5px 0;
-        }
+
         .contact-info {
             display: flex;
             justify-content: center;
@@ -101,21 +100,20 @@
             gap: 15px;
         }
         .contact-links img {
-            width: 40px;  /* アイコンのサイズを調整 */
-            height: 40px; /* アイコンのサイズを調整 */
+            width: 40px;
+            height: 40px;
         }
+
         .main-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            opacity: 0;
-            animation: fadeIn 1s forwards ease-in-out;
+            display: block;
             max-width: 1300px;
             margin: auto;
             padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards ease-in-out;
         }
-        .education-section, .research-section, .paper-section, .patents-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section, .articleintro-section {
+
+        section {
             background-color: var(--box-background);
             padding: 20px;
             box-shadow: 0 4px 6px var(--box-shadow);
@@ -123,36 +121,39 @@
             opacity: 0;
             transform: translateY(20px);
             animation: slideUp 0.5s forwards ease-in-out;
+            margin-bottom: 20px;
         }
-        .education-section:hover, .research-section:hover, .paper-section:hover, .patents-section:hover, .intern-section:hover, .studyfield-section:hover, .skill-section:hover, .other-section:hover, .paperintro-section:hover, .articleintro-section:hover {
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        section:hover {
+            box-shadow: 0 10px 12px rgba(125, 125, 125, 0.3);
         }
-        .education-section h2, .research-section h2, .paper-section h2, .patents-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2, .articleintro-section h2 {
-            font-size: 28px; /* セクションタイトルフォントサイズ */
+        section h2 {
+            font-size: 28px;
             margin-bottom: 10px;
         }
-        .education-section p, .research-section p, .paper-section p, .patents-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p, .articleintro-section p {
+        section p {
             margin: 0;
             font-size: 20px;
         }
-        .education-entry, .research-entry, .paper-entry, .patents-entry, .intern-entry, .studyfield-entry, .skill-entry, .other-entry, .paperintro-entry, .articleintro-entry {
+
+        .entry {
             margin-bottom: 15px;
         }
-        .education-entry h3, .research-entry h3, .paper-entry h3, .patents-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3, .other-entry h3, .paperintro-entry h3, .articleintro-entry h3 {
-            font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
+        .entry h3 {
+            font-size: 24px;
             margin: 5px 0;
         }
-        .education-entry p, .research-entry p, .paper-entry p, .patents-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p, .paperintro-entry p, .articleintro-entry p {
+        .entry p {
             margin: 5px 0;
         }
-        .paperintro-entry-container, .articleintro-entry-container {
+
+        .intro-entry-container {
             display: flex;
             overflow-x: auto;
             gap: 20px;
             padding-bottom: 20px;
             scroll-snap-type: x mandatory;
         }
-        .paperintro-entry, .articleintro-entry {
+        .intro-entry {
             flex: 0 0 auto;
             width: 350px;
             display: flex;
@@ -164,42 +165,40 @@
             box-shadow: 0 4px 6px var(--box-shadow);
             border-radius: 8px;
             text-align: center;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* ホバー効果の追加 */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             scroll-snap-align: start;
-            text-decoration: none; /* リンクの下線を削除 */
-            color: var(--text-color); /* リンクの文字色をテキストと同じに設定 */
+            text-decoration: none;
+            color: var(--text-color);
         }
-        .paperintro-entry h3, .articleintro-entry h3 {
-            font-size: 20px; /* 論文タイトルのフォントサイズを調整 */
-            margin-bottom: 5px; /* タイトルと画像の間に余白を追加 */
-            line-height: 1.2; /* 行間を詰める */
+        .intro-entry h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            line-height: 1.2;
             display: inline;
         }
-        .paperintro-entry img, .articleintro-entry img {
+        .intro-entry img {
             width: 100%;
             height: auto;
-            max-width: 450px; /* サムネイルの最大幅を設定 */
-            aspect-ratio: 4/3; /* サムネイルのアスペクト比を設定 */
+            max-width: 450px;
+            aspect-ratio: 4/3;
             object-fit: cover;
             margin-bottom: 10px;
         }
-        .paperintro-entry .paperinfo, .articleintro-entry .articleinfo {
-            text-align: center;
-        }
-        .paperintro-entry .paperinfo a, .articleintro-entry .articleinfo a {
+        .intro-entry .info a {
             display: inline-flex;
             align-items: center;
             color: #0073b1;
             text-decoration: none;
             font-weight: bold;
         }
-        .paperintro-entry .paperinfo a:hover, .articleintro-entry .articleinfo a:hover {
+        .intro-entry .info a:hover {
             text-decoration: underline;
         }
-        .paperintro-entry:hover, .articleintro-entry:hover {
-            transform: translateY(-10px); /* ホバー時の動きを追加 */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* ホバー時の影の強調 */
+        .intro-entry:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
+
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -211,21 +210,13 @@
                 transform: translateY(0);
             }
         }
-        @media (max-width: 800px) {
-            .main-content {
-                grid-template-columns: 1fr; /* 幅が狭いデバイスでは一列に調整 */
-            }
-        }
-        @media (min-width: 801px) {
-            .main-content {
-                grid-template-columns: repeat(2, 1fr); /* 幅が広いデバイスでは二列に調整 */
-            }
-        }
+
         .theme-toggle {
             position: absolute;
             top: 20px;
             right: 20px;
         }
+
         .switch {
             position: relative;
             display: inline-block;
@@ -237,6 +228,7 @@
             width: 0;
             height: 0;
         }
+
         .slider {
             position: absolute;
             cursor: pointer;
@@ -259,65 +251,36 @@
             transition: .4s;
             border-radius: 50%;
         }
+
         input:checked + .slider {
             background-color: #4f619d;
         }
         input:checked + .slider:before {
             transform: translateX(26px);
         }
-        .paper-section, .patents-section, .paperintro-section, .articleintro-section {
-            grid-column: span 2;
-        }
-        .skill-entry .progress-bar div {
-            flex-grow: 1;
-            height: 10px;
-            background-color: #ddd;
-            min-width: 5px; /* 最小横幅を設定 */
-        }
-        .skill-entry .progress-bar div.active {
-            flex-grow: 1;
-            height: 10px;
-            background-color: #0c698b;
-            min-width: 5px; /* 最小横幅を設定 */
-        }
+
         .progress-bar {
             display: flex;
             gap: 5px;
         }
         .progress-bar div {
+            flex-grow: 1;
             width: 90px;
             height: 10px;
             background-color: #ddd;
+            min-width: 5px;
         }
         .progress-bar div.active {
+            flex-grow: 1;
+            width: 90px;
+            height: 10px;
             background-color: #0c698b;
+            min-width: 5px;
         }
+
         .contact-section {
-            background-color: var(--box-background);
-            padding: 20px;
-            box-shadow: 0 4px 6px var(--box-shadow);
-            border-radius: 8px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 0.5s forwards ease-in-out;
             text-align: center;
-            grid-column: span 2;
         }
-
-        .contact-section:hover {
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-section h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .contact-entry p {
-            margin: 0;
-            font-size: 20px;
-        }
-
         .contact-button {
             display: inline-block;
             margin-top: 10px;
@@ -329,7 +292,6 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-
         .contact-button:hover {
             background-color: #005580;
         }
@@ -347,10 +309,6 @@
         <h1>原田 海斗</h1>
         <p class="affiliation">静岡大学大学院 峰野研究室 修士1年</p>
         <div class="contact-links">
-            <!-- <div class="contact-info">
-                <a href="tel:070-7543-0383"><img src="phone_icon.png" alt="電話アイコン"></a>
-                <p>070-7543-0383</p>
-            </div> -->
             <div class="contact-info">
                 <a href="mailto:harada.kaito.20@shizuoka.ac.jp"><img src="mail_icon.png" alt="メールアイコン"></a>
                 <p>harada.kaito.20 [at-mark] shizuoka.ac.jp</p>
@@ -372,7 +330,7 @@
     <div class="main-content">
         <section class="education-section">
             <h2>学歴</h2>
-            <div class="education-entry">
+            <div class="entry">
                 <p>（2014~2017）射水市立 大門中学校</p>
                 <p>（2017~2020）射水市立 大門高等学校 情報コース</p>
                 <p>（2020~2024）静岡大学 情報学部 情報科学科</p>
@@ -381,7 +339,7 @@
         </section>
         <section class="research-section">
             <h2>業績</h2>
-            <div class="research-entry">
+            <div class="entry">
                 <p>（2024.1）国際特許出願</p>
                 <p>（2024.3）情報処理学会第86回全国大会 学生奨励賞 <a href="https://www.ipsj.or.jp/award/taikaigakusei.html#hdg1" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
                 <p>（2024.6）DICOMO2024 優秀プレゼンテーション賞 <a href="https://dicomo.org/commendation/" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
@@ -389,7 +347,7 @@
         </section>
         <section class="paper-section">
             <h2>学会発表</h2>
-            <div class="paper-entry">
+            <div class="entry">
                 <p>・原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024 <a href="https://confit.atlas.jp/guide/event/deim2024/subject/T2-B-7-02/tables?cryptoId=" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
                 <p>・原田海斗, 他: "NexmonによるCSIベースの人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024 <a href="https://www.ipsj.or.jp/event/taikai/86/WEB/data/pdf/1ZC-01.html" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
                 <p>・原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024 <a href="https://tsys.jp/dicomo/2024/program/program.html#4F" target="_blank"><img src="download_icon.png" alt="PDFアイコン" style="width:16px; height:16px;"></a></p>
@@ -397,28 +355,27 @@
         </section>
         <section class="patents-section">
             <h2>特許</h2>
-            <div class="patents-entry">
+            <div class="entry">
                 <p>・峰野博史, 原田海斗「推定システム、推定プログラム、および推定方法」（出願番号：2024-010392，出願日：2024.1.26）</p>
             </div>
         </section>
         <section class="intern-section">
             <h2>インターン経験</h2>
-            <div class="intern-entry">
+            <div class="entry">
                 <p>（2024.7）BIGLOBE株式会社</p>
-                <!-- <p>（2024.7）株式会社NTTドコモ</p> -->
                 <p>（2024.8）弁護士ドットコム株式会社</p>
             </div>
         </section>
         <section class="other-section">
             <h2>その他（開発活動）</h2>
-            <div class="other-entry">
+            <div class="entry">
                 <p>（2024.1）メール自動送信システムの開発</p>
                 <p>（2024.6）遠鉄バスどこ!?（PC版）の開発</p>
             </div>
         </section>
         <section class="skill-section">
             <h2>技術スタック</h2>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>Python</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -428,7 +385,7 @@
                     <div class="active"></div>
                 </div>
             </div>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>Jupyter Notebook</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -438,7 +395,7 @@
                     <div></div>
                 </div>
             </div>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>Pytorch/TensorFlow/Keras</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -448,7 +405,7 @@
                     <div></div>
                 </div>
             </div>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>HTML/CSS/JavaScript</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -458,7 +415,7 @@
                     <div></div>
                 </div>
             </div>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>AWS</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -468,7 +425,7 @@
                     <div></div>
                 </div>
             </div>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>C言語</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -478,7 +435,7 @@
                     <div></div>
                 </div>
             </div>
-            <div class="skill-entry">
+            <div class="entry">
                 <p>Java</p>
                 <div class="progress-bar">
                     <div class="active"></div>
@@ -491,7 +448,7 @@
         </section>
         <section class="studyfield-section">
             <h2>研究領域</h2>
-            <div class="studyfield-entry">
+            <div class="entry">
                 <p>・IoT</p>
                 <p>・機械学習</p>
                 <p>・時系列データ処理</p>
@@ -501,20 +458,20 @@
         </section>
         <section class="paperintro-section">
             <h2>論文紹介</h2>
-            <div class="paperintro-entry-container">
-                <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank" class="paperintro-entry">
+            <div class="intro-entry-container">
+                <a href="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank" class="intro-entry">
                     <h3>連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討</h3>
                     <img src="連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.png" alt="発表資料サムネイル">
                     <p>2024.6.27</p>
                     <p>マルチメディア、分散、協調とモバイル(DICOMO2024)</p>
                 </a>
-                <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank" class="paperintro-entry">
+                <a href="NexmonによるCSIベースの人物通過検出システムに関する研究.pdf" target="_blank" class="intro-entry">
                     <h3>NexmonによるCSIを用いた人物通過検出システムに関する研究</h3>
                     <img src="NexmonによるCSIを用いた人物通過検出システムに関する研究.png" alt="発表資料サムネイル">
                     <p>2024.3.15</p>
                     <p>情報処理学会第86回全国大会</p>
                 </a>
-                <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank" class="paperintro-entry">
+                <a href="NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank" class="intro-entry">
                     <h3>NexmonによるCSIベースのスマートデバイス状態推定</h3>
                     <img src="NexmonによるCSIベースのスマートデバイス状態推定.png" alt="発表資料サムネイル">
                     <p>2024.3.1</p>
@@ -524,48 +481,48 @@
         </section>
         <section class="articleintro-section">
             <h2>投稿記事紹介</h2>
-            <div class="articleintro-entry-container">
-                <a href="https://qiita.com/muumin_0525/items/d6db1e858c035a0a2514" target="_blank" class="articleintro-entry">
+            <div class="intro-entry-container">
+                <a href="https://qiita.com/muumin_0525/items/d6db1e858c035a0a2514" target="_blank" class="intro-entry">
                     <h3>【静岡県民必見！？】遠鉄バスどこ！？（PC版）作ってみた</h3>
                     <img src="【静岡県民必見！？】遠鉄バスどこ！？（PC版）作ってみた.png" alt="投稿記事サムネイル">
                     <p>2024.6.25</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/3ee104aed0d3cb6a1dab" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/3ee104aed0d3cb6a1dab" target="_blank" class="intro-entry">
                     <h3>【取り扱い注意】偽アプリの作り方</h3>
                     <img src="【取り扱い注意】偽アプリの作り方.png" alt="投稿記事サムネイル">
                     <p>2024.6.7</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/26ae779db23a1c862158" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/26ae779db23a1c862158" target="_blank" class="intro-entry">
                     <h3>【LaTeX】VSCodeでOverleafを操作しよう！</h3>
                     <img src="【LaTeX】VSCodeでOverleafを操作しよう！.png" alt="投稿記事サムネイル">
                     <p>2024.4.11</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/a1ccc320577f51ea4667" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/a1ccc320577f51ea4667" target="_blank" class="intro-entry">
                     <h3>GPTの歴史についてざっくり解説</h3>
                     <img src="GPTの歴史についてざっくり解説.png" alt="投稿記事サムネイル">
                     <p>2024.4.11</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/77160e7faf84bf6d8188" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/77160e7faf84bf6d8188" target="_blank" class="intro-entry">
                     <h3>【OpenCVで居眠り検知カメラを作ってみた</h3>
                     <img src="OpenCVで居眠り検知カメラを作ってみた.png" alt="投稿記事サムネイル">
                     <p>2024.4.10</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/8e9ef1081b372509d4a1" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/8e9ef1081b372509d4a1" target="_blank" class="intro-entry">
                     <h3>Nexmonの環境構築 for RaspberryPi3/4B</h3>
                     <img src="Nexmonの環境構築 for RaspberryPi3-4B.png" alt="投稿記事サムネイル">
                     <p>2024.4.10</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/ea5602685e129093581f" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/ea5602685e129093581f" target="_blank" class="intro-entry">
                     <h3>OFDM通信方式について</h3>
                     <img src="OFDM通信方式について.png" alt="投稿記事サムネイル">
                     <p>2024.4.9</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/6d7e81651d3b37e11183" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/6d7e81651d3b37e11183" target="_blank" class="intro-entry">
                     <h3>定時メール自動送信システムの作成</h3>
                     <img src="定時メール自動送信システムの作成.png" alt="投稿記事サムネイル">
                     <p>2024.1.29</p>
                 </a>
-                <a href="https://qiita.com/muumin_0525/items/dc0a48d5c5ea902bb6a7" target="_blank" class="articleintro-entry">
+                <a href="https://qiita.com/muumin_0525/items/dc0a48d5c5ea902bb6a7" target="_blank" class="intro-entry">
                     <h3>【Python】競馬シミュレーションアプリを作ろう！</h3>
                     <img src="【Python】競馬シミュレーションアプリを作ろう！.png" alt="投稿記事サムネイル">
                     <p>2023.6.13</p>
@@ -574,7 +531,7 @@
         </section>
         <section class="contact-section">
             <h2>お問い合わせ</h2>
-            <div class="contact-entry">
+            <div class="entry">
                 <p>お問い合わせは以下のリンクからお願いします</p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLsxrNhWs9A0owocwPH_-omMbq9hWDXn-Ow_o_ASmD_DaOKw/viewform?usp=sf_link" target="_blank" class="contact-button">お問い合わせフォーム</a>
             </div>
@@ -590,19 +547,11 @@
         document.getElementById('theme-switch').addEventListener('change', toggleTheme);
 
         document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .patents-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section, .articleintro-section');
+            const sections = document.querySelectorAll('section');
             sections.forEach((section, index) => {
                 section.style.animationDelay = `${index * 0.2}s`;
             });
         });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.education-section, .research-section, .paper-section, .patents-section, .intern-section, .studyfield-section, .skill-section, .other-section, .paperintro-section, .articleintro-section, .contact-section');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.2}s`;
-            });
-        });
-
     </script>
 </body>
 </html>
