@@ -59,17 +59,17 @@
         }
         header img {
             border-radius: 50%;
-            width: 150px; /* 顔写真の幅を調整 */
-            height: 150px; /* 顔写真の高さを調整 */
+            width: 300px; /* 顔写真の幅を調整 */
+            height: 300px; /* 顔写真の高さを調整 */
             object-fit: cover;
         }
         h1 {
             margin: 10px 0;
-            font-size: 32px; /* 名前のフォントサイズを調整 */
+            font-size: 44px; /* 名前のフォントサイズを調整 */
         }
         .affiliation { /* 所属部署のスタイル */
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 22px;
         }
         p {
             margin: 5px 0;
@@ -90,7 +90,7 @@
         }
         .contact-info p {
             margin: 0;
-            font-size: 16px;
+            font-size: 20px;
         }
         .contact-info a:hover {
             text-decoration: underline;
@@ -98,16 +98,15 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 15px;
         }
         .contact-links img {
-            width: 30px;  /* アイコンのサイズを調整 */
-            height: 30px; /* アイコンのサイズを調整 */
+            width: 40px;  /* アイコンのサイズを調整 */
+            height: 40px; /* アイコンのサイズを調整 */
         }
         .main-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             justify-content: center;
             opacity: 0;
@@ -129,18 +128,18 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
         .education-section h2, .research-section h2, .paper-section h2, .patents-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2, .articleintro-section h2 {
-            font-size: 24px; /* セクションタイトルフォントサイズ */
+            font-size: 28px; /* セクションタイトルフォントサイズ */
             margin-bottom: 10px;
         }
         .education-section p, .research-section p, .paper-section p, .patents-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p, .articleintro-section p {
             margin: 0;
-            font-size: 16px;
+            font-size: 20px;
         }
         .education-entry, .research-entry, .paper-entry, .patents-entry, .intern-entry, .studyfield-entry, .skill-entry, .other-entry, .paperintro-entry, .articleintro-entry {
             margin-bottom: 15px;
         }
         .education-entry h3, .research-entry h3, .paper-entry h3, .patents-entry h3, .intern-entry h3, .studyfield-entry h3, .skill-entry h3, .other-entry h3, .paperintro-entry h3, .articleintro-entry h3 {
-            font-size: 20px; /* 学校名および研究タイトルのフォントサイズ */
+            font-size: 24px; /* 学校名および研究タイトルのフォントサイズ */
             margin: 5px 0;
         }
         .education-entry p, .research-entry p, .paper-entry p, .patents-entry p, .intern-entry p, .studyfield-entry p, .skill-entry p, .other-entry p, .paperintro-entry p, .articleintro-entry p {
@@ -155,7 +154,7 @@
         }
         .paperintro-entry, .articleintro-entry {
             flex: 0 0 auto;
-            width: 300px;
+            width: 350px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -171,7 +170,7 @@
             color: var(--text-color); /* リンクの文字色をテキストと同じに設定 */
         }
         .paperintro-entry h3, .articleintro-entry h3 {
-            font-size: 18px; /* 論文タイトルのフォントサイズを調整 */
+            font-size: 20px; /* 論文タイトルのフォントサイズを調整 */
             margin-bottom: 5px; /* タイトルと画像の間に余白を追加 */
             line-height: 1.2; /* 行間を詰める */
             display: inline;
@@ -179,7 +178,7 @@
         .paperintro-entry img, .articleintro-entry img {
             width: 100%;
             height: auto;
-            max-width: 300px; /* サムネイルの最大幅を設定 */
+            max-width: 450px; /* サムネイルの最大幅を設定 */
             aspect-ratio: 4/3; /* サムネイルのアスペクト比を設定 */
             object-fit: cover;
             margin-bottom: 10px;
@@ -212,8 +211,13 @@
                 transform: translateY(0);
             }
         }
+        @media (min-width: 801px) {
+            .main-content {
+                grid-template-columns: repeat(2, 1fr); /* 幅が広いデバイスでは二列に調整 */
+            }
+        }
         @media (max-width: 600px) {
-            header img {
+            header img{
                 width: 100px;
                 height: 100px;
             }
@@ -226,18 +230,6 @@
             .contact-links img {
                 width: 25px;
                 height: 25px;
-            }
-            .education-section h2, .research-section h2, .paper-section h2, .patents-section h2, .intern-section h2, .studyfield-section h2, .skill-section h2, .other-section h2, .paperintro-section h2, .articleintro-section h2 {
-                font-size: 20px;
-            }
-            .education-section p, .research-section p, .paper-section p, .patents-section p, .intern-section p, .studyfield-section p, .skill-section p, .other-section p, .paperintro-section p, .articleintro-section p {
-                font-size: 14px;
-            }
-            .paperintro-entry, .articleintro-entry {
-                width: 260px;
-            }
-            .paperintro-entry h3, .articleintro-entry h3 {
-                font-size: 16px;
             }
         }
         .theme-toggle {
@@ -328,13 +320,13 @@
         }
 
         .contact-section h2 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 10px;
         }
 
         .contact-entry p {
             margin: 0;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         .contact-button {
@@ -393,7 +385,7 @@
             <h2>学歴</h2>
             <div class="education-entry">
                 <p>（2014~2017）射水市立 大門中学校</p>
-                <p>（2017~2020）射水市立 大門高等学校</p>
+                <p>（2017~2020）射水市立 大門高等学校 情報コース</p>
                 <p>（2020~2024）静岡大学 情報学部 情報科学科</p>
                 <p>（2024~2026）静岡大学大学院 総合科学技術研究科 情報学専攻</p>
             </div>
@@ -420,19 +412,19 @@
                 <p>・峰野博史, 原田海斗「推定システム、推定プログラム、および推定方法」（出願番号：2024-010392，出願日：2024.1.26）</p>
             </div>
         </section>
-        <section class="other-section">
-            <h2>その他（開発活動）</h2>
-            <div class="other-entry">
-                <p>（2024.1）メール自動送信システムの開発</p>
-                <p>（2024.6）遠鉄バスどこ!?（PC版）の開発</p>
-            </div>
-        </section>
         <section class="intern-section">
             <h2>インターン経験</h2>
             <div class="intern-entry">
                 <p>（2024.7）BIGLOBE株式会社</p>
                 <!-- <p>（2024.7）株式会社NTTドコモ</p> -->
                 <p>（2024.8）弁護士ドットコム株式会社</p>
+            </div>
+        </section>
+        <section class="other-section">
+            <h2>その他（開発活動）</h2>
+            <div class="other-entry">
+                <p>（2024.1）メール自動送信システムの開発</p>
+                <p>（2024.6）遠鉄バスどこ!?（PC版）の開発</p>
             </div>
         </section>
         <section class="skill-section">
