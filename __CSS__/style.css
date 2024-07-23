@@ -1,3 +1,7 @@
+/* ===================
+reset
+=================== */
+
 :root {
     --background-color: #f4f4f9;
     --text-color: #333;
@@ -18,6 +22,10 @@
     --scrollbar-thumb-color: #888;
 }
 
+/* ===================
+scrollbar
+=================== */
+
 ::-webkit-scrollbar {
     width: 12px;
     height: 18px;
@@ -30,6 +38,10 @@
     border-radius: 10px;
     border: 3px solid var(--scrollbar-color);
 }
+
+/* ===================
+global
+=================== */
 
 body {
     font-family: Arial, sans-serif;
@@ -60,10 +72,20 @@ h1 {
     font-size: 44px;
 }
 
+ul li, ol li {
+    font-size: 20px;
+    line-height: 1.5; /*文の行高*/
+    padding: 0.2em 0; /*前後の文との余白*/
+    }
+
 .affiliation {
     margin: 5px 0;
     font-size: 22px;
 }
+
+/* ===================
+contact
+=================== */
 
 .contact-info {
     display: flex;
@@ -86,6 +108,7 @@ h1 {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
 .contact-links {
     display: flex;
     justify-content: center;
@@ -95,6 +118,10 @@ h1 {
     width: 40px;
     height: 40px;
 }
+
+/* ===================
+section
+=================== */
 
 .main-content {
     display: block;
@@ -127,6 +154,10 @@ section p {
     font-size: 20px;
 }
 
+/* ===================
+section-entry
+=================== */
+
 .entry {
     margin-bottom: 15px;
 }
@@ -137,6 +168,10 @@ section p {
 .entry p {
     margin: 5px 0;
 }
+
+/* ===================
+section-intro-entry
+=================== */
 
 .intro-entry-container {
     display: flex;
@@ -203,6 +238,10 @@ section p {
     }
 }
 
+/* ===================
+toggle-switch
+=================== */
+
 .theme-toggle {
     position: absolute;
     top: 20px;
@@ -220,6 +259,10 @@ section p {
     width: 0;
     height: 0;
 }
+
+/* ===================
+slider
+=================== */
 
 .slider {
     position: absolute;
@@ -251,6 +294,10 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+/* ===================
+progress-bar
+=================== */
+
 .progress-bar {
     display: flex;
     gap: 5px;
@@ -270,6 +317,10 @@ input:checked + .slider:before {
     min-width: 5px;
 }
 
+/* ===================
+contact-form
+=================== */
+
 .contact-section {
     text-align: center;
 }
@@ -287,6 +338,10 @@ input:checked + .slider:before {
 .contact-button:hover {
     background-color: #005580;
 }
+
+/* ===================
+media queries
+=================== */
 
 @media (max-width: 768px) {
     header {
@@ -415,10 +470,4 @@ input:checked + .slider:before {
         top: 10px;
         right: 10px;
     }
-}
-
-ul li, ol li {
-font-size: 20px;
-line-height: 1.5; /*文の行高*/
-padding: 0.2em 0; /*前後の文との余白*/
 }
