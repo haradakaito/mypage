@@ -6,12 +6,13 @@
     <title>原田海斗 / Kaito Harada</title>
     <link rel="icon" type="image/png" href="__PNG__/myface.png">
     <link rel="stylesheet" href="style.css">
+    <script src="fuction.js"></script>
 </head>
 <body>
     <header>
         <div class="theme-toggle">
             <label class="switch">
-                <input type="checkbox" id="theme-switch">
+                <input type="checkbox" id="theme-switch" onchange="toggleTheme()">
                 <span class="slider"></span>
             </label>
         </div>
@@ -254,20 +255,7 @@
         </section>
     </div>
     <script>
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-        }
-
-        document.getElementById('theme-switch').addEventListener('change', toggleTheme);
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('section');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.2}s`;
-            });
-        });
+        document.addEventListener("DOMContentLoaded", delayloadsection());
     </script>
 </body>
 </html>
