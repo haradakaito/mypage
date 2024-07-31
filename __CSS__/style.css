@@ -391,6 +391,12 @@ media queries
         font-size: 18px;
     }
 
+    ul li, ol li {
+        font-size: 20px;
+        line-height: 1.5; /*文の行高*/
+        padding: 0.2em 0; /*前後の文との余白*/
+        }
+
     .intro-entry {
         width: calc(100% - 30px);
         margin: 0 15px;
@@ -452,6 +458,12 @@ media queries
     section p {
         font-size: 16px;
     }
+
+    ul li, ol li {
+        font-size: 16px;
+        line-height: 1.5; /*文の行高*/
+        padding: 0.2em 0; /*前後の文との余白*/
+        }
 
     .intro-entry {
         width: calc(100% - 20px);
