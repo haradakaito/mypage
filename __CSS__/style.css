@@ -193,3 +193,34 @@ li {
 .contact-button:hover {
     background-color: #005580;
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .affiliation {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 0 0.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
