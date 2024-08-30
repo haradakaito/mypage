@@ -6,7 +6,7 @@
     <title>原田海斗 / Kaito Harada</title>
     <link rel="icon" type="image/png" href="__PNG__/myface.png">
     <link rel="stylesheet" href="__CSS__/style.css">
-    <script src="__JS__/fuction.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,36 +14,51 @@
         <h1>原田 海斗</h1>
         <p class="affiliation">静岡大学大学院 峰野研究室 修士1年</p>
         <div class="contact-links">
-            <a href="mailto:harada.kaito.20@shizuoka.ac.jp" class="icon-link" aria-label="Email">
-                <img src="__PNG__/__ICON__/mail_icon.png" alt="メールアイコン">
+            <a href="mailto:haradakaito.shizuoka@gmail.com" class="icon-link" aria-label="Email">
+                <i class="fas fa-envelope"></i>
             </a>
             <a href="https://www.linkedin.com/in/haradakaito/" target="_blank" class="icon-link" aria-label="LinkedIn">
-                <img src="__PNG__/__ICON__/linkedin_icon.png" alt="Linkedinアイコン">
+                <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://github.com/haradakaito" target="_blank" class="icon-link" aria-label="GitHub">
-                <img src="__PNG__/__ICON__/github_icon.png" alt="Githubアイコン">
+                <i class="fab fa-github"></i>
             </a>
             <a href="https://qiita.com/haradakaito" target="_blank" class="icon-link" aria-label="Qiita">
-                <img src="__PNG__/__ICON__/qiita_icon.png" alt="Qiitaアイコン">
+                <i class="fas fa-q"></i>
             </a>
             <a href="https://www.instagram.com/dumdum_chanman/" target="_blank" class="icon-link" aria-label="Instagram">
-                <img src="__PNG__/__ICON__/instagram_icon.png" alt="Instagramアイコン">
+                <i class="fab fa-instagram"></i>
             </a>
         </div>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#education">学歴</a></li>
+            <li><a href="#achievements">業績</a></li>
+            <li><a href="#papers">学会発表</a></li>
+            <li><a href="#patents">特許</a></li>
+            <li><a href="#qualifications">資格</a></li>
+            <li><a href="#internships">インターン経験</a></li>
+            <li><a href="#fields">研究領域</a></li>
+            <li><a href="#skills">スキル</a></li>
+            <li><a href="#papers_intro">論文紹介</a></li>
+            <li><a href="#articles">記事紹介</a></li>
+        </ul>
+    </nav>
+
     <main class="main-content">
-        <section class="education-section">
+        <div id="education" class="section">
             <h2>学歴</h2>
             <ul>
-                <li>（2014~2017）射水市立 大門中学校</li>
-                <li>（2017~2020）富山県立 大門高等学校 情報コース</li>
-                <li>（2020~2024）静岡大学 情報学部 情報科学科</li>
-                <li>（2024~2026）静岡大学大学院 総合科学技術研究科 情報学専攻</li>
+                <li>（2024-2017）射水市立 大門中学校</li>
+                <li>（2017-2020）富山県立 大門高等学校 情報コース</li>
+                <li>（2020-2024）静岡大学 情報学部 情報科学科</li>
+                <li>（2024-2026）静岡大学大学院 総合科学技術研究科 情報学専攻</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="achievements-section">
+        <div id="achievements" class="section">
             <h2>業績</h2>
             <ul>
                 <li>（2024.1）国際特許出願</li>
@@ -51,49 +66,41 @@
                 <li>（2024.6）DICOMO2024 優秀プレゼンテーション賞 <a href="https://dicomo.org/commendation/" target="_blank" class="download-link">詳細</a></li>
                 <li>（2024.8）リバネス研究費 第65回リアルテックファンド賞（申請）<a href="https://r.lne.st/" target="_blank" class="download-link">詳細</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section class="paper-section">
+        <div id="papers" class="section">
             <h2>学会発表</h2>
             <ul>
-                <li>（2024.3）原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024. <a href="https://confit.atlas.jp/guide/event/deim2024/subject/T2-B-7-02/tables?cryptoId=" target="_blank" class="download-link">詳細</a></li>
-                <li>（2024.3）原田海斗, 他: "NexmonによるCSIを用いた人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024. <a href="https://www.ipsj.or.jp/event/taikai/86/WEB/data/pdf/1ZC-01.html" target="_blank" class="download-link">詳細</a></li>
-                <li>（2024.6）原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024. <a href="https://tsys.jp/dicomo/2024/program/program.html#4F" target="_blank" class="download-link">詳細</a></li>
+                <li>（2024.3）原田海斗, 他: "NexmonによるCSIベースのスマートデバイス状態推定", データ工学と情報マネジメントに関するフォーラム(DEIM2024), 2024. <a href="https://confit.atlas.jp/guide/event/deim2024/subject/T2-B-7-02/tables?cryptoId=" target="_blank" class="download-link">詳細</a> <a href="__PDF__/NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank" class="download-link">PDF</a></li>
+                <li>（2024.3）原田海斗, 他: "NexmonによるCSIを用いた人物通過検出システムに関する研究", 情報処理学会第86回全国大会, 2024. <a href="https://www.ipsj.or.jp/event/taikai/86/WEB/data/pdf/1ZC-01.html" target="_blank" class="download-link">詳細</a> <a href="__PDF__/NexmonによるCSIを用いた人物通過検出システムに関する研究.pdf" target="_blank" class="download-link">PDF</a></li>
+                <li>（2024.6）原田海斗, 他: "連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討", マルチメディア、分散、協調とモバイル(DICOMO2024), 2024. <a href="https://tsys.jp/dicomo/2024/program/program.html#4F" target="_blank" class="download-link">詳細</a> <a href="__PDF__/連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank" class="download-link">PDF</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section class="patents-section">
+        <div id="patents" class="section">
             <h2>特許</h2>
             <ul>
                 <li>峰野博史, 原田海斗「推定システム、推定プログラム、および推定方法」（出願番号：2024-010392，出願日：2024.1.26）</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="qualification-section">
+        <div id="qualifications" class="section">
             <h2>資格</h2>
             <ul>
                 <li>（2023.7）TOEIC® 700点</li>
                 <li>（2024.8）AWS Certified Cloud Practitioner 取得予定</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="intern-section">
+        <div id="internships" class="section">
             <h2>インターン経験</h2>
             <ul>
                 <li>（2024.8）BIGLOBE株式会社 AWSオンラインプログラム <a href="https://deep-professor-e3c.notion.site/AWS-2days-AWS-f6ea7f1400554b9f86a63fcc8027b6f2" target="_blank" class="download-link">詳細</a></li>
                 <li>（2024.8）BIGLOBE株式会社 ネットワークエンジニア業務体験 <a href="https://deep-professor-e3c.notion.site/BIGLOBE-723be34656fb4b87974ecea26293363b" target="_blank" class="download-link">詳細</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section class="other-section">
-            <h2>活動・プロジェクト</h2>
-            <ul>
-                <li>（2024.1）メール自動送信システムの開発 <a href="https://github.com/haradakaito/Automatic_Email_Sending" target="_blank" class="download-link">詳細</a></li>
-                <li>（2024.8）リバネス研究費：第65回リアルテックファンド賞（申請中） <a href="__PDF__/リバネス研究費の申請書.pdf" target="_blank" class="download-link">PDF</a></li>
-            </ul>
-        </section>
-
-        <section class="studyfield-section">
+        <div id="fields" class="section">
             <h2>研究領域</h2>
             <div class="entry">
                 <ul class="tag-list">
@@ -104,110 +111,53 @@
                     <li>ヒューマンセンシング</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <section class="skills-section">
-            <h2>技術スタック</h2>
-            <div class="skill-entry">
-                <p>Python</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;"></div>
-                </div>
+        <div id="skills" class="section">
+            <h2>スキル</h2>
+            <div class="entry">
+                <ul class="tag-list">
+                    <li>Python</li>
+                    <li>Jupyter Notebook</li>
+                    <li>Pytorch/TensorFlow/Keras</li>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>AWS</li>
+                    <li>C言語</li>
+                    <li>Java</li>
+                </ul>
             </div>
-            <div class="skill-entry">
-                <p>Jupyter Notebook</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-            </div>
-            <div class="skill-entry">
-                <p>Pytorch/TensorFlow/Keras</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-            </div>
-            <div class="skill-entry">
-                <p>HTML/CSS/JavaScript</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-            </div>
-            <div class="skill-entry">
-                <p>AWS</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-            </div>
-            <div class="skill-entry">
-                <p>C言語</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 40%;"></div>
-                </div>
-            </div>
-            <div class="skill-entry">
-                <p>Java</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 40%;"></div>
-                </div>
-            </div>
-        </section>
+        </div>
 
-        <section class="papers-section">
+        <div id="papers_intro" class="section">
             <h2>論文紹介</h2>
             <div class="paper-grid">
                 <div class="paper-card">
                     <img src="__PNG__/paper/連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.png" alt="論文サムネイル">
                     <h3>連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討</h3>
                     <p>2024.6.27</p>
-                    <p>マルチメディア、分散、協調とモバイル(DICOMO2024)</p>
-                    <a href="__PDF__/連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.pdf" target="_blank" class="paper-link">PDF</a>
+                    <p>マルチメディア、分散、協調とモバイル（DICOMO2024）</p>
+                    <a href="https://speakerdeck.com/haradakaito/lian-he-xue-xi-woyong-itafu-shu-domeinnimatagarucsibesunowei-zhi-tui-ding-sisutemuniguan-suruchu-qi-jian-tao" target="_blank" class="paper-link">発表資料</a>
                 </div>
                 <div class="paper-card">
                     <img src="__PNG__/paper/NexmonによるCSIを用いた人物通過検出システムに関する研究.png" alt="論文サムネイル">
                     <h3>NexmonによるCSIを用いた人物通過検出システムに関する研究</h3>
                     <p>2024.3.15</p>
                     <p>情報処理学会第86回全国大会</p>
-                    <a href="__PDF__/NexmonによるCSIを用いた人物通過検出システムに関する研究.pdf" target="_blank" class="paper-link">PDF</a>
+                    <a href="https://speakerdeck.com/haradakaito/nexmonniyorucsiwoyong-itaren-wu-tong-guo-jian-chu-sisutemuniguan-suruyan-jiu" target="_blank" class="paper-link">発表資料</a>
                 </div>
                 <div class="paper-card">
                     <img src="__PNG__/paper/NexmonによるCSIベースのスマートデバイス状態推定.png" alt="論文サムネイル">
                     <h3>NexmonによるCSIベースのスマートデバイス状態推定</h3>
                     <p>2024.3.1</p>
-                    <p>データ工学と情報マネジメントに関するフォーラム(DEIM2024)</p>
-                    <a href="__PDF__/NexmonによるCSIベースのスマートデバイス状態推定.pdf" target="_blank" class="paper-link">PDF</a>
+                    <p>データ工学と情報マネジメントに関するフォーラム（DEIM2024）</p>
+                    <a href="https://speakerdeck.com/haradakaito/nexmonniyorucsibesunosumatodebaisuzhuang-tai-tui-ding" target="_blank" class="paper-link">発表資料</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="papers-section">
-            <h2>発表資料紹介</h2>
-            <div class="paper-grid">
-                <div class="paper-card">
-                    <img src="__PNG__/speakerdeck/連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討.png" alt="発表資料サムネイル">
-                    <h3>連合学習を用いた複数ドメインにまたがるCSIベースの位置推定システムに関する初期検討</h3>
-                    <p>2024.6.27</p>
-                    <p>マルチメディア、分散、協調とモバイル(DICOMO2024)</p>
-                    <a href="https://speakerdeck.com/haradakaito/lian-he-xue-xi-woyong-itafu-shu-domeinnimatagarucsibesunowei-zhi-tui-ding-sisutemuniguan-suruchu-qi-jian-tao" target="_blank" class="paper-link">PDF</a>
-                </div>
-                <div class="paper-card">
-                    <img src="__PNG__/speakerdeck/NexmonによるCSIを用いた人物通過検出システムに関する研究.png" alt="発表資料サムネイル">
-                    <h3>NexmonによるCSIを用いた人物通過検出システムに関する研究</h3>
-                    <p>2024.3.15</p>
-                    <p>情報処理学会第86回全国大会</p>
-                    <a href="https://speakerdeck.com/haradakaito/nexmonniyorucsiwoyong-itaren-wu-tong-guo-jian-chu-sisutemuniguan-suruyan-jiu" target="_blank" class="paper-link">PDF</a>
-                </div>
-                <div class="paper-card">
-                    <img src="__PNG__/speakerdeck/NexmonによるCSIベースのスマートデバイス状態推定.png" alt="発表資料サムネイル">
-                    <h3>NexmonによるCSIベースのスマートデバイス状態推定</h3>
-                    <p>2024.3.1</p>
-                    <p>データ工学と情報マネジメントに関するフォーラム(DEIM2024)</p>
-                    <a href="https://speakerdeck.com/haradakaito/nexmonniyorucsibesunosumatodebaisuzhuang-tai-tui-ding" target="_blank" class="paper-link">PDF</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="papers-section">
-            <h2>投稿記事紹介</h2>
+        <div id="articles" class="section">
+            <h2>記事紹介</h2>
             <div class="paper-grid">
                 <div class="paper-card">
                     <img src="__PNG__/qiita/【AWS】EventBridgeを使って，組織用・個人用のGoogleカレンダーを統合した予定通知を行いたい.png" alt="投稿記事サムネイル">
@@ -272,21 +222,24 @@
                 <div class="paper-card">
                     <img src="__PNG__/qiita/【Python】競馬シミュレーションアプリを作ろう！.png" alt="投稿記事サムネイル">
                     <h3>【Python】競馬シミュレーションアプリを作ろう！</h3>
-                    <p></p>
+                    <p>2023.6.13</p>
                     <a href="https://qiita.com/haradakaito/items/dc0a48d5c5ea902bb6a7" target="_blank" class="paper-link">記事リンク</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="contact-section">
+        <div id="contact" class="section">
             <h2>お問い合わせ</h2>
-            <p>お問い合わせは以下のリンクからお願いします</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLsxrNhWs9A0owocwPH_-omMbq9hWDXn-Ow_o_ASmD_DaOKw/viewform?usp=sf_link" target="_blank" class="contact-button">お問い合わせフォーム</a>
-        </section>
+            <p>お問い合わせは以下のフォームからお願いします</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLsxrNhWs9A0owocwPH_-omMbq9hWDXn-Ow_o_ASmD_DaOKw/viewform?usp=sf_link" target="_blank" class="contact-button">
+                <i class="fas fa-envelope"></i> お問い合わせフォーム
+            </a>
+        </div>
     </div>
     </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", delayloadsection());
-    </script>
+
+    <footer>
+        <p>&copy; 2024 原田海斗. All rights reserved.</p>
+    </footer>
 </body>
 </html>
