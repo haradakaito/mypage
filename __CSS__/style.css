@@ -252,3 +252,86 @@ footer {
         display: none;
     }
 }
+
+/* モバイル対応用のメディアクエリ */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+        font-size: 14px; /* 基本フォントサイズの調整 */
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* タイトルのフォントサイズ調整 */
+    }
+
+    .affiliation {
+        font-size: 1rem; /* 所属のフォントサイズ調整 */
+    }
+
+    .language-switch {
+        font-size: 0.9rem; /* 日本語と英語の切り替えリンクのフォントサイズ調整 */
+        top: 15px; /* 位置を少し下げる */
+        right: 20px; /* 位置を少し右に寄せる */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* ナビゲーションリンクのフォントサイズ調整 */
+    }
+
+    .contact-links img {
+        width: 36px;
+        height: 36px; /* アイコンのサイズ調整 */
+    }
+
+    .section {
+        padding-top: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.4rem; /* セクションヘッダーのフォントサイズ調整 */
+    }
+
+    .section ul li,
+    .section p {
+        font-size: 0.9rem; /* 各セクション本文のフォントサイズ調整 */
+    }
+
+    .paper-card img {
+        height: 100px; /* サムネイル画像の高さ調整 */
+    }
+
+    .paper-card h3 {
+        font-size: 0.9rem; /* 論文タイトルのフォントサイズ調整 */
+    }
+
+    .paper-card p {
+        font-size: 0.8rem; /* 発表日と場所のフォントサイズ調整 */
+    }
+
+    .paper-link, .contact-button {
+        font-size: 0.9rem; /* リンクボタンのフォントサイズ調整 */
+        padding: 0.6rem 1rem; /* ボタンのサイズ調整 */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* フッターのフォントサイズ調整 */
+    }
+}
