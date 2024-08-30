@@ -6,6 +6,10 @@
     --card-background: #d3e7f2;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -40,17 +44,15 @@ h1 {
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.icon-link img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-}
-
-.icon-link:hover img {
-    transform: scale(1.1);
+.contact-links img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin-right: 5px;
+    margin-top: 10px;
 }
 
 .header-content {
@@ -97,8 +99,9 @@ nav ul li a:hover {
 
 .section {
     padding-top: 4rem;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 h2 {
@@ -171,7 +174,7 @@ li {
 }
 
 .paper-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1rem;
     margin-bottom: auto;
 }
@@ -218,4 +221,10 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        display: none;
+    }
 }
