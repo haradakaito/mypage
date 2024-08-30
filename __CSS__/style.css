@@ -41,6 +41,26 @@ h1 {
     margin-bottom: 1rem;
 }
 
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 1rem;
+}
+
+.language-switch a {
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
@@ -85,6 +105,10 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
 }
 
 nav ul li a:hover {
@@ -223,7 +247,7 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1260px) {
     nav {
         display: none;
     }
