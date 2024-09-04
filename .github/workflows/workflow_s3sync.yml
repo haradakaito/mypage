@@ -10,7 +10,7 @@ env:
   AWS_ROLENAME: 'haradakaito-idp'
   AWS_S3_BUCKET: 'haradakaito.org'
   SOURCE_DIR: '.'
-  DEST_DIR: '.'
+  DEST_DIR: ''
 
 jobs:
   deploy:
