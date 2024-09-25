@@ -1,1 +1,82 @@
-function _0x1514(_0x364904,_0x595c10){const _0x102375=_0x1023();return _0x1514=function(_0x15145b,_0x53fee6){_0x15145b=_0x15145b-0x121;let _0xc0a79c=_0x102375[_0x15145b];return _0xc0a79c;},_0x1514(_0x364904,_0x595c10);}const _0x1d5a67=_0x1514;function _0x1023(){const _0x281348=['active','remove','main\x20.section','8110DxBCyD','preventDefault','key','ctrlKey','includes','pageYOffset','contextmenu','scroll','DOMContentLoaded','44dyvMbJ','3581324aMKsby','offsetHeight','144369ahQrne','17523fzoPog','6781329FEkTVm','nav\x20ul\x20li\x20a','clientHeight','log','setAttribute','header','addEventListener','437915ApHNYU','getAttribute','matchMedia','66048JaafnX','classList','forEach','F12','285rhzSxA','shiftKey','querySelector','8LSpawQ','href','dark','querySelectorAll','keydown','7508228GhUpeB','(prefers-color-scheme:\x20dark)'];_0x1023=function(){return _0x281348;};return _0x1023();}(function(_0x4448e3,_0x2395b4){const _0x4183de=_0x1514,_0x3ddae2=_0x4448e3();while(!![]){try{const _0x1966e7=parseInt(_0x4183de(0x133))/0x1+parseInt(_0x4183de(0x127))/0x2*(-parseInt(_0x4183de(0x12a))/0x3)+-parseInt(_0x4183de(0x128))/0x4+parseInt(_0x4183de(0x13a))/0x5*(-parseInt(_0x4183de(0x136))/0x6)+-parseInt(_0x4183de(0x142))/0x7*(-parseInt(_0x4183de(0x13d))/0x8)+parseInt(_0x4183de(0x12c))/0x9+-parseInt(_0x4183de(0x147))/0xa*(-parseInt(_0x4183de(0x12b))/0xb);if(_0x1966e7===_0x2395b4)break;else _0x3ddae2['push'](_0x3ddae2['shift']());}catch(_0x3380c7){_0x3ddae2['push'](_0x3ddae2['shift']());}}}(_0x1023,0xede5e),document['addEventListener'](_0x1d5a67(0x126),function(){const _0x4fbfd9=_0x1d5a67,_0x502d19=document[_0x4fbfd9(0x140)](_0x4fbfd9(0x146)),_0x4e2265=document['querySelectorAll'](_0x4fbfd9(0x12d)),_0x73fb25=document[_0x4fbfd9(0x13c)](_0x4fbfd9(0x131))[_0x4fbfd9(0x129)],_0x45ca3f=window[_0x4fbfd9(0x135)]&&window[_0x4fbfd9(0x135)]('(prefers-color-scheme:\x20dark)')['matches'];console[_0x4fbfd9(0x12f)](window[_0x4fbfd9(0x135)](_0x4fbfd9(0x143))['matches']);const _0x3b55c4=_0x45ca3f?_0x4fbfd9(0x13f):'light';document['documentElement'][_0x4fbfd9(0x130)]('data-theme',_0x3b55c4),window[_0x4fbfd9(0x132)](_0x4fbfd9(0x125),function(){const _0x4b13c3=_0x4fbfd9;let _0x578b84='';_0x502d19[_0x4b13c3(0x138)](_0x53b1ad=>{const _0x4530f6=_0x4b13c3,_0x1eac77=_0x53b1ad['offsetTop'],_0x3785ff=_0x53b1ad[_0x4530f6(0x12e)],_0x574a3b=_0x1eac77+_0x3785ff;window['pageYOffset']>=_0x1eac77-0x32&&window[_0x4530f6(0x123)]<_0x574a3b&&(_0x578b84=_0x53b1ad[_0x4530f6(0x134)]('id'));}),_0x4e2265[_0x4b13c3(0x138)](_0xa682be=>{const _0x58983e=_0x4b13c3;_0xa682be[_0x58983e(0x137)][_0x58983e(0x145)]('active'),_0xa682be[_0x58983e(0x134)](_0x58983e(0x13e))[_0x58983e(0x122)](_0x578b84)&&_0xa682be[_0x58983e(0x137)]['add']('active');}),window[_0x4b13c3(0x123)]<_0x73fb25&&_0x4e2265['forEach'](_0x4778b7=>_0x4778b7[_0x4b13c3(0x137)][_0x4b13c3(0x145)](_0x4b13c3(0x144)));});}),document[_0x1d5a67(0x132)](_0x1d5a67(0x124),function(_0x4f849d){const _0x294eeb=_0x1d5a67;_0x4f849d[_0x294eeb(0x148)]();}),document[_0x1d5a67(0x132)](_0x1d5a67(0x141),function(_0x337ae3){const _0x26e5cb=_0x1d5a67;_0x337ae3['key']===_0x26e5cb(0x139)&&_0x337ae3['preventDefault'](),_0x337ae3[_0x26e5cb(0x121)]&&_0x337ae3['shiftKey']&&_0x337ae3[_0x26e5cb(0x149)]==='I'&&_0x337ae3[_0x26e5cb(0x148)](),_0x337ae3[_0x26e5cb(0x121)]&&_0x337ae3[_0x26e5cb(0x13b)]&&_0x337ae3[_0x26e5cb(0x149)]==='J'&&_0x337ae3['preventDefault'](),_0x337ae3[_0x26e5cb(0x121)]&&_0x337ae3[_0x26e5cb(0x149)]==='U'&&_0x337ae3[_0x26e5cb(0x148)]();}),document['addEventListener'](_0x1d5a67(0x141),function(_0x1d6e39){const _0x3403d9=_0x1d5a67;_0x1d6e39[_0x3403d9(0x121)]&&_0x1d6e39[_0x3403d9(0x13b)]&&_0x1d6e39['key']==='C'&&_0x1d6e39['preventDefault']();}));
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(async function() {
+        count = await getCount();
+        document.getElementById("count").textContent = `${count} views`;
+    }, 0);
+
+    const sections = document.querySelectorAll("main .section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const headerHeight = document.querySelector("header").offsetHeight;
+
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    console.log(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const theme = userPrefersDark ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+
+    window.addEventListener("scroll", function() {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const sectionBottom = sectionTop + sectionHeight;
+
+            if (window.pageYOffset >= sectionTop - 50 && window.pageYOffset < sectionBottom) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+
+        // ヘッダー付近にいる場合はすべてのリンクのactiveクラスを削除
+        if (window.pageYOffset < headerHeight) {
+            navLinks.forEach(link => link.classList.remove("active"));
+        }
+    });
+});
+
+async function getCount(){
+    try {
+        const response = await fetch("https://sm5sgazoognwotdsenjfy2i7ii0idcax.lambda-url.ap-northeast-1.on.aws/");
+        const data = await response.json();
+        if (data.count) {
+            return data.count;
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
+    // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+    }
+    // Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+    }
+    // Ctrl+U
+    if (e.ctrlKey && e.key === 'U') {
+        e.preventDefault();
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+    }
+});
