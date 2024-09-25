@@ -9,5 +9,5 @@
 - AWS（S3, CloudFront, Route53, Lambda, DynamoDB）
 
 # API内容
-- views（閲覧数）表示用の，閲覧数（取得用）
-- views（閲覧数）表示用の，閲覧数（更新用）
+- views（閲覧数）表示用の閲覧数（取得用）
+- views（閲覧数）表示用の閲覧数（更新用）
