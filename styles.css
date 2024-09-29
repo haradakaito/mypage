@@ -4,6 +4,8 @@
     --text-color: #333;
     --background-color: #eef1f4;
     --card-background: #d3e7f2;
+    --button-background: #0073b1;
+    --button-hover: #005580;
 }
 
 :root[data-theme='dark'] {
@@ -11,7 +13,9 @@
     --secondary-color: #333;
     --text-color: #e0e0e0;
     --background-color: #121212;
-    --card-background: #5aa4ce92;
+    --card-background: #055f90;
+    --button-background: #168ccc;
+    --button-hover: #0073b1;
 }
 
 html {
@@ -252,17 +256,18 @@ li {
     display: block;
     margin: 1rem;
     padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--button-background);
     color: #fff;
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-top: auto;
 }
 
 .paper-link:hover {
-    background-color: #005580;
+    background-color: var(--button-hover);
 }
 
 .contact-button {
@@ -271,12 +276,13 @@ li {
     color: white;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: #005580;
+    background-color: var(--button-hover);
 }
 
 footer {
