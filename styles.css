@@ -270,6 +270,23 @@ li {
     background-color: var(--button-hover);
 }
 
+.external-link-icon {
+    font-size: 1rem; /* アイコンを少し大きく */
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.paper-link .external-link-icon {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.paper-link:hover .external-link-icon {
+    color: var(--button-hover);
+}
+
+
+
 .contact-button {
     display: inline-block;
     background-color: var(--primary-color);
