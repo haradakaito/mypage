@@ -1,0 +1,431 @@
+:root[data-theme='light'] {
+    --primary-color: #0073b1;
+    --secondary-color: #cce5f5;
+    --text-color: #333;
+    --background-color: #eef1f4;
+    --card-background: #d3e7f2;
+    --button-background: #0073b1;
+    --button-hover: #005580;
+}
+
+:root[data-theme='dark'] {
+    --primary-color: #055f90;
+    --secondary-color: #333;
+    --text-color: #e0e0e0;
+    --background-color: #121212;
+    --card-background: #055f90;
+    --button-background: #168ccc;
+    --button-hover: #0073b1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.affiliation {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 1rem;
+}
+
+.language-switch a {
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+    color: #e4eef4;
+    text-decoration: underline;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-links img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+    margin-top: 10px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#count {
+    margin-bottom: auto;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.backToTop:hover {
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+}
+
+.backToTop:hover path {
+    fill: var(--primary-color);
+}
+
+#backtoTop_icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.main-content {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.section {
+    padding-top: 4rem;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+.download-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-list li {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.paper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.paper-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    border-color: var(--primary-color);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.paper-card:hover {
+    transform: translateY(-5px);
+}
+
+.paper-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.paper-card h3 {
+    font-size: 1rem;
+    margin: 1rem;
+    margin-bottom: auto;
+}
+
+.paper-card p {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.paper-link {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--button-background);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.paper-link:hover {
+    background-color: var(--button-hover);
+}
+
+.external-link-icon {
+    font-size: 1rem; /* アイコンを少し大きく */
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.paper-link .external-link-icon {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.paper-link:hover .external-link-icon {
+    color: var(--button-hover);
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button i {
+    margin-right: 8px; /* アイコンとテキストの間にスペースを追加 */
+    font-size: 1.2rem;  /* アイコンの大きさを調整 */
+}
+
+.contact-button:hover {
+    background-color: var(--button-hover);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1260px) {
+    nav {
+        display: none;
+    }
+}
+
+/* モバイル対応用のメディアクエリ */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+        font-size: 14px;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .affiliation {
+        font-size: 1rem;
+    }
+
+    .language-switch {
+        font-size: 0.7rem;
+        top: 15px;
+        right: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .contact-links img {
+        width: 36px;
+        height: 36px;
+        margin-right: 1.5px;
+        margin-left: 1.5px;
+        margin-top: 7px;
+    }
+
+    .backToTop {
+        width: 50px;
+        height: 50px;
+    }
+
+    #backtoTop_icon {
+        width: 24px;
+        height: 24px;
+        fill: white;
+    }
+
+    .section {
+        padding-top: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .section ul li,
+    .section p {
+        font-size: 0.9rem;
+    }
+
+    .paper-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .paper-card {
+        height: auto;
+    }
+
+    .paper-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .paper-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .paper-card p {
+        font-size: 0.8rem;
+    }
+
+    .paper-link, .contact-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
