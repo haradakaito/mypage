@@ -317,7 +317,7 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1350px) {
     nav {
         display: none;
     }
